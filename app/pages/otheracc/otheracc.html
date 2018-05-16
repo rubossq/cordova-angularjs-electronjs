@@ -1,0 +1,115 @@
+<div ng-controller='otheraccCtrl'>
+	<table class='otheracc-topbar'>
+		<tr>
+			<td class='otheracc-topbar-image-block' ng-click='back()'>
+				<img class='otheracc-topbar-image' src="images/back.png">
+			</td>
+			<td class='otheracc-topbar-text'>
+				<div ng-bind='userNick'></div>
+			</td>
+			<td class='otheracc-topbar-diamonds center'>
+				<div class='otheracc-topbar-diamonds-num inline'>{{deposit}}</div>
+				<img class='otheracc-topbar-diamonds-image' src="images/diamonds_white.png">
+			</td>
+		</tr>
+	</table>
+
+	<div class="otheracc-block none">
+
+		<div class='otheracc-info'>
+			<table class='otheracc-stat-block'>
+				<tr>
+					<td class='otheracc-margin'></td>
+					<td class='otheracc-padding'>
+						<img class='otheracc-avatar' ng-src="{{userAvatar}}">
+					</td>
+					<td class='otheracc-stat otheracc-padding right'>
+						<div class='otheracc-stat-num' ng-bind="followersCount"></div>
+						<div class='otheracc-stat-text' ng-bind='followersText'></div>
+					</td>
+					<td class='otheracc-stat otheracc-padding right'>
+						<div class='otheracc-stat-num' ng-bind="followingCount"></div>
+						<div class='otheracc-stat-text' ng-bind='followingText'></div>
+					</td>
+					<td class='otheracc-stat otheracc-padding right'>
+						<div class='otheracc-stat-num' ng-bind="postsCount"></div>
+						<div class='otheracc-stat-text otheracc-stat-text-hidden' ng-bind='postsText'></div>
+					</td>
+					<td class='otheracc-margin'></td>
+				</tr>
+			</table>
+			<div class='otheracc-bottom-border'></div>
+			<div class='otheracc-order-block center'>
+				<div class='otheracc-order-but' ng-click='showOrderSubs()' ng-bind='orderAcc'></div>
+			</div>
+			<div class='quest-block center'>
+				<div ng-repeat="post in posts" class='quest-elem-block relative none' on-long-press="multipleBidLikes($index)" 
+					ng-mouseover="switchLongField('over', $index)" ng-mouseleave="switchLongField('leave', $index)" ng-click='bidLikes(post)'>
+					<div class='quest-active-block none'></div>
+					<div class='quest-likes-field inline'>
+						<div class='quest-likes-text inline'>{{post.getLikesCount()}}</div>
+						<img class='quest-likes-image inline' src="images/quest_like.png">
+						{{setPosts($index, post.getThumbnail())}}
+					</div>
+					<div class='quest-active-mark quest-inactive-mark none' ng-mouseover="switchLongMark('over', $index)" 
+						ng-mouseleave="switchLongMark('leave', $index)"	ng-click="multipleBidLikes($index, $event)">
+						<img class='quest-active-image' src='images/check_mark.png'>
+					</div>
+				</div>
+			</div>
+			<div class='clear'></div>
+
+			<div class='otheracc-more-but more-but center none' ng-click='showMore()'>
+				<div class='otheracc-more-text more-text' ng-bind='showMoreBut'></div>
+				<img class='otheracc-more-anim more-anim none' src='images/ripple.svg'>
+			</div>
+
+			<div class='otheracc-more-block more-block center none'>
+				<div class="more-elem1 inline"></div>
+				<div class="more-elem2 inline"></div>
+				<div class="more-elem3 inline"></div>
+				<div class="more-elem4 inline"></div>
+			</div>
+		</div>
+		
+		<table class='otheracc-empty-block none'>
+			<tr>
+				<td class='center'>
+					<img class='otheracc-empty-image' src='app/pages/otheracc/images/otheracc_no_tasks.png'>
+					<div class='otheracc-empty-text' ng-bind='emptyText'></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<table class='otheracc-err-block none'>
+		<tr>
+			<td class='center'>
+				<img class='otheracc-empty-image' src='app/pages/otheracc/images/otheracc_no_tasks.png'>
+				<div class='otheracc-empty-text' ng-bind='errText'></div>
+			</td>
+		</tr>
+	</table>
+
+	<!-- DIALOG FOR BID LIKES ON SINGLE QUESTION -->
+	<table class='otheracc-dialog-block none' ng-click='hideOrderSubs()'>
+		<tr>
+			<td class='center'>
+				<div class='otheracc-dialog-content inline'>
+					<div class='center'>
+						<input ng-change='changePrice()' ng-enter='bidSubs()' ng-model='subsCountDialog' type='text' class='otheracc-dialog-input center' 
+						placeholder='{{dialogPh}}'>
+					</div>
+					<div class='otheracc-dialog-coins center'>
+						{{diamondsText}} - <span class='otheracc-dialog-coins-price'>{{priceSubs}}</span> 
+						<img class='otheracc-dialog-coins-image' src="images/diamonds_red.png">
+					</div>
+					<div class='center'>
+						<div class='otheracc-dialog-but' ng-click="bidSubs()" ng-bind='sendText'></div>
+						<div class='otheracc-dialog-but none'><img class='but-anim' src="images/ripple.svg"></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

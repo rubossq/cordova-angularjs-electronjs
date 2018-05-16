@@ -1,0 +1,12 @@
+.launchignore!
+.htaccess
+checksumm!
+files!
+checkstatus.txt!
+launcher/
+Thumbs.db!
+platforms/
+app/services/store-ios.js~
+js/main/utils/PlatformConfig-ios.js~
+index-ios.html~
+cordova-ios/~

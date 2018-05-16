@@ -1,0 +1,112 @@
+<div class='main-block' ng-controller='mainCtrl'>
+	<div class='main-update-block center none'>
+		<img class='main-update-image' src="images/update.png">
+	</div>
+	<div class='main-content'>
+		<div id='mainWrap' style="margin-top:0px;">
+			<table class='main-stat-block'>
+				<tr>
+					<td class='main-margin'></td>
+					<td class='main-padding'>
+						<img class='main-avatar' ng-src="{{profileAvatar}}">
+					</td>
+					<td class='main-stat main-padding right'>
+						<div class='main-stat-num' ng-bind="followersCount"></div>
+						<div class='main-stat-text' ng-bind='followersText'></div>
+					</td>
+					<td class='main-stat main-padding right'>
+						<div class='main-stat-num' ng-bind="followingCount"></div>
+						<div class='main-stat-text' ng-bind='followingText'></div>
+					</td>
+					<td class='main-stat main-padding right'>
+						<div class='main-stat-num' ng-bind="postsCount"></div>
+						<div class='main-stat-text main-stat-text-hidden' ng-bind='postsText'></div>
+					</td>
+					<td class='main-margin'></td>
+				</tr>
+			</table>
+
+			<div class='main-level-block'>
+				<div class='main-progress-block'>
+					<div class='main-progress-bar' ng-style= "{'width': lvlProgress}"></div>
+				</div>
+				<div class='main-level-text inline' ng-bind='levelText'></div>
+				<div class='main-level-num inline' ng-bind='userLvl'></div>
+			</div>
+			<div class='main-bottom-border'></div>
+
+			<div class='main-achieve-block'>
+				<a class='main-achieve' ng-repeat="achieve in achieves" ng-href='{{achieve.href}}'>
+					<img class='main-achieve-image inline' ng-src='{{achieve.src}}'>
+					{{defineAchieve($index, achieve.name)}}
+				</a>
+			</div>
+			<div class='main-bottom-border'></div>
+
+			<!-- fast earn -->
+			<div class='main-earn-block relative none'>
+				<img class='main-earn-image' src="app/pages/main/images/main_earn.png">
+
+				<div class='main-earn-but none' ng-click='showSpeedUp()'>
+					<div class='main-earn-but-text' ng-bind='earnButText'></div>
+				</div>
+
+				<div class='main-earn-progress none'>
+					<div class='main-earn-progress-text' ng-bind='speedEarnRun'></div>
+					<div class='main-earn-progress-block'>
+						<div class='main-earn-progress-bar'></div>
+					</div>
+				</div>
+
+				<div class='main-earn-wait center none'>
+					<div class='main-earn-wait-text' ng-bind='autoEarnText'></div>
+					<div class='main-earn-wait-time'></div>
+				</div>
+			</div>
+			<div class='main-bottom-border none'></div>
+
+			<table class='main-transition'>
+				<tr ng-click='menuTransition("referral")'>
+					<td class='main-transition-left'>
+						<img class='main-referral-image' src="app/pages/main/images/main_referrals.png">
+					</td>
+					<td class='main-transition-right'>
+						<div class='main-transition-text' ng-bind='referralText'></div>
+					</td>
+					<td class='main-transition-ref' ng-click='showRefList()'>
+						<div class='main-transition-ref-block inline center'>
+							<div class='main-transition-ref-text inline' ng-bind='referralDiamonds'></div>
+							<img class='main-transition-ref-diamonds' src="images/diamonds_white.png">
+						</div>
+					</td>
+				</tr>
+				<tr ng-click='menuTransition("otheracc")'>
+					<td class='main-transition-left'>
+						<img class='main-otheracc-image' src="app/pages/main/images/main_otheracc.png">
+					</td>
+					<td class='main-transition-right' colspan='2'>
+						<div class='main-transition-text' ng-bind='orderOtherAcc'></div>
+					</td>
+				</tr>
+				<tr ng-click='menuTransition("autotask")'>
+					<td class='main-transition-left'>
+						<img class='main-autotask-image' src="app/pages/main/images/main_autotask.png">
+					</td>
+					<td class='main-transition-right' colspan='2'>
+						<div class='main-transition-text' ng-bind='autoTaskText'></div>
+					</td>
+				</tr>
+				<tr ng-click='menuTransition("lvlprize")'>
+					<td class='main-transition-left'>
+						<img class='main-lvlprize-image' src="app/pages/main/images/main_lvlprize.png">
+					</td>
+					<td class='main-transition-right' colspan='2'>
+						<div class='main-transition-text' ng-bind='lvlprizeText'></div>
+					</td>
+				</tr>
+			</table>
+
+			<div class='main-bottom-border'></div>
+		</div>
+	</div>
+</div>

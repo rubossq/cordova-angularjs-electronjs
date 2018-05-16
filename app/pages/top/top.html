@@ -1,0 +1,117 @@
+<table class='top-topbar'>
+	<tr>
+		<td class='top-topbar-image-block' ng-click='back()'>
+			<img class='top-topbar-image' src="images/back.png">
+		</td>
+		<td class='top-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+		<td class='top-topbar-dialog right' ng-click='showHelpDialog()'>
+			<img class='top-topbar-dialog-image' src='app/pages/top/images/top_dialog.png'>
+		</td>
+	</tr>
+</table>
+
+<div class='top-info relative center'>
+	<div class='top-userpos none'>
+		<div class='top-userpos-nick' ng-bind='userposNick'></div>
+		<div class='top-userpos-place'>{{userposPlace}} <span ng-bind='placeText'></span></div>
+	</div>
+
+	<div class='top-time-text' ng-bind='prizeTimeText'></div>
+	<div class='top-time-block inline center'></div>
+</div>
+
+<div class='top-block'>
+	<div class='top-pos-sign'>
+		<div class='top-pos-sign-left inline' ng-bind='userText'></div>
+		<div class='top-pos-sign-right inline' ng-bind='tasksCompleteText'></div>
+	</div>
+	<table>
+		<tr ng-repeat="top in tops" class='top-elem'>
+			<td class='top-pos-left'>
+				<div class='top-pos-place center'>{{top.getPlace()}}</div>
+				{{placeColors($index)}}
+			</td>
+			<td class='top-pos-middle'>
+				<div class='top-pos-name'>{{top.getLogin()}}</div>
+			</td>
+			<td class='top-pos-right'>
+				<div class='top-pos-res'>{{top.getCount()}}</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<!-- top dialog -->
+<table class='top-dialog-block none' ng-click='hideHelpDialog()'>
+	<tr>
+		<td class='center'>
+			<div class='top-dialog-content inline'>
+				<table class='top-dialog-list'>
+					<tr>
+						<td class='top-dialog-left'>
+							<div class='top-dialog-place top-dialog-first center'><div class='top-dialog-place-num' ng-bind='dialogPlace1Text'></div></div>
+						</td>
+						<td class='top-dialog-middle left'>
+							<div class='top-dialog-middle-text' ng-bind='dialogPlaceText'></div>
+						</td>
+						<td class='top-dialog-right'>
+							<div class='top-dialog-coins inline' ng-bind='dialogFirstNum'></div>
+							<img class='top-dialog-image' src="images/diamonds_red.png">
+						</td>
+					</tr>
+					<tr>
+						<td class='top-dialog-left'>
+							<div class='top-dialog-place top-dialog-second center'><div class='top-dialog-place-num' ng-bind='dialogPlace2Text'></div></div>
+						</td>
+						<td class='top-dialog-middle left'>
+							<div class='top-dialog-middle-text' ng-bind='dialogPlaceText'></div>
+						</td>
+						<td class='top-dialog-right'>
+							<div class='top-dialog-coins inline' ng-bind='dialogSecondNum'></div>
+							<img class='top-dialog-image' src="images/diamonds_red.png">
+						</td>
+					</tr>
+					<tr>
+						<td class='top-dialog-left'>
+							<div class='top-dialog-place top-dialog-third center'><div class='top-dialog-place-num' ng-bind='dialogPlace3Text'></div></div>
+						</td>
+						<td class='top-dialog-middle left'>
+							<div class='top-dialog-middle-text' ng-bind='dialogPlaceText'></div>
+						</td>
+						<td class='top-dialog-right'>
+							<div class='top-dialog-coins inline' ng-bind='dialogThirdNum'></div>
+							<img class='top-dialog-image' src="images/diamonds_red.png">
+						</td>
+					</tr>
+					<tr>
+						<td class='top-dialog-left'>
+							<div class='top-dialog-place top-dialog-fourth center'><div class='top-dialog-place-num' ng-bind='dialogPlace4Text'></div></div>
+						</td>
+						<td class='top-dialog-middle left'>
+							<div class='top-dialog-middle-text' ng-bind='dialogPlaceText'></div>
+						</td>
+						<td class='top-dialog-right'>
+							<div class='top-dialog-coins inline' ng-bind='dialogFourthNum'></div>
+							<img class='top-dialog-image' src="images/diamonds_red.png">
+						</td>
+					</tr>
+					<tr>
+						<td class='top-dialog-left'>
+							<div class='top-dialog-place top-dialog-fifth center'><div class='top-dialog-place-num' ng-bind='dialogPlace5Text'></div></div>
+						</td>
+						<td class='top-dialog-middle left'>
+							<div class='top-dialog-middle-text' ng-bind='dialogPlaceText'></div>
+						</td>
+						<td class='top-dialog-right'>
+							<div class='top-dialog-coins inline' ng-bind='dialogFifthNum'></div>
+							<img class='top-dialog-image' src="images/diamonds_red.png">
+						</td>
+					</tr>
+				</table>
+				<div class='top-dialog-but inline center' ng-bind='dialogButText' ng-click='hideHelpDialog()'></div>
+			</div>
+		</td>
+	</tr>
+</table>

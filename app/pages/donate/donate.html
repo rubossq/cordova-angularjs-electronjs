@@ -1,0 +1,205 @@
+<!-- temp blocking -->
+<table class='donate-nopay-block none'>
+	<tr>
+		<td class='center'>
+			<div class='donate-nopay-text' ng-bind='noPayText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='donate-content'>
+	<div class='none' id='diamondsBlock'>
+		<table class='donate-order-block' id='ipack_1_name'>
+			<tr>
+				<td class='donate-left center'>
+					<img class='donate-left-image' src="app/pages/donate/images/donate_one.png">
+				</td>
+				<td class='donate-middle'>
+					<div class='donate-num' id="ipack_1_title"></div>
+					<div class='donate-price' id="ipack_1_price"></div>
+				</td>
+				<td class='donate-empty center' ng-bind='emptyField'></td>
+				<td class='donate-right'>
+					<div class='donate-buy center' ng-click="order('ipack_1')" ng-bind='buyButText'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='donate-bottom-border'></div>
+		<table class='donate-order-block' id='ipack_2_name'>
+			<tr>
+				<td class='donate-left center'>
+					<img class='donate-left-image' src="app/pages/donate/images/donate_two.png">
+				</td>
+				<td class='donate-middle'>
+					<div class='donate-num' id="ipack_2_title"></div>
+					<div class='donate-price' id="ipack_2_price"></div>
+				</td>
+				<td class='donate-discount center' ng-bind='popularText'></td>
+				<td class='donate-right'>
+					<div class='donate-buy center' ng-click="order('ipack_2')" ng-bind='buyButText'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='donate-bottom-border'></div>
+		<table class='donate-order-block' id='pack_3_name'>
+			<tr>
+				<td class='donate-left center'>
+					<img class='donate-left-image' src="app/pages/donate/images/donate_three.png">
+				</td>
+				<td class='donate-middle'>
+					<div class='donate-num' id="pack_3_title"></div>
+					<div class='donate-price' id="pack_3_price"></div>
+				</td>
+				<td class='donate-empty center' ng-bind='emptyField'></td>
+				<td class='donate-right'>
+					<div class='donate-buy center' ng-click="order('pack_3')" ng-bind='buyButText'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='donate-bottom-border'></div>
+		<table class='donate-order-block' id='pack_4_name'>
+			<tr>
+				<td class='donate-left center'>
+					<img class='donate-left-image' src="app/pages/donate/images/donate_four.png">
+				</td>
+				<td class='donate-middle'>
+					<div class='donate-num' id="pack_4_title"></div>
+					<div class='donate-price' id="pack_4_price"></div>
+				</td>
+				<td class='donate-empty center' ng-bind='emptyField'></td>
+				<td class='donate-right'>
+					<div class='donate-buy center' ng-click="order('pack_4')" ng-bind='buyButText'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='donate-bottom-border'></div>
+		<table class='donate-order-block' id='pack_5_name'>
+			<tr>
+				<td class='donate-left center'>
+					<img class='donate-left-image' src="app/pages/donate/images/donate_four.png">
+				</td>
+				<td class='donate-middle'>
+					<div class='donate-num' id="pack_5_title"></div>
+					<div class='donate-price' id="pack_5_price"></div>
+				</td>
+				<td class='donate-discount center' ng-bind='bestValueText'></td>
+				<td class='donate-right'>
+					<div class='donate-buy center' ng-click="order('pack_5')" ng-bind='buyButText'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='donate-bottom-border'></div>
+	</div>
+
+	<!-- PREMIUM CONTENT -->
+	<div class='none' id='premiumBlock'>
+		<table class='donate-premium-block' id='premium_name'>
+			<tr>
+				<td class='center'>
+					<div class='donate-premium-top'>
+						<div class='donate-premium-top-circle center'>
+							<img class='donate-premium-top-image' src='app/pages/donate/images/donate_premium.png'>
+						</div>
+					</div>
+					<div class='donate-premium-bottom'>
+						<div class='donate-premium-bottom-head center' id='premium_id'></div>
+						<div class='donate-premium-bottom-text left'>
+							<ul>
+								<li ng-bind='premiumFirstText'></li>
+								<li ng-bind='premiumSecondText'></li>
+								<li ng-bind='premiumThirdText'></li>
+								<li ng-bind='premiumFourthText'></li>
+							</ul>
+						</div>
+						<div class='donate-premium-bottom-but center' id="premium_price" ng-click="order('premium')"></div>
+					</div>
+				</td>	
+			</tr>
+		</table>
+	</div>
+
+	<div class='none' id='turboBlock'>
+		<!-- turbo light -->
+		<table class='donate-turbo-block donate-turbo-light' id='turbos_1_name'>
+			<tr>
+				<td class='donate-turbo-left left'>
+					<div class='donate-turbo-left-circle center inline relative'>
+						<img class='donate-turbo-left-background' src="app/pages/donate/images/donate_turbo_light_bg.png">
+						<img class='donate-turbo-image-light relative' src='app/pages/donate/images/donate_turbo_light.png'>
+					</div>
+				</td>
+				<td class='donate-turbo-right left'>
+					<div class='donate-turbo-right-head' ng-bind='turboLightHeadText'></div>
+					<div class='donate-turbo-right-text'>
+						<ul class='donate-turbo-right-list'>
+							<li class='donate-turbo-right-textelem' ng-bind='turboGreenFirstText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboGreenSecondText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboGreenThirdText'></li>
+						</ul>
+					</div>
+					<div class='donate-turbo-right-but center' id="turbos_1_price" ng-click="order('turbos_1')"></div>
+				</td>
+			</tr>
+		</table>
+
+		<!-- turbo medium -->
+		<table class='donate-turbo-block donate-turbo-medium' id='iturbos_2_name'>
+			<tr>
+				<td class='donate-turbo-left left'>
+					<div class='donate-turbo-left-circle center inline relative'>
+						<img class='donate-turbo-left-background' src="app/pages/donate/images/donate_turbo_medium_bg.png">
+						<img class='donate-turbo-image-medium relative' src='app/pages/donate/images/donate_turbo_medium.png'>
+					</div>
+				</td>
+				<td class='donate-turbo-right left'>
+					<div class='donate-turbo-right-head' ng-bind='turboMediumHeadText'></div>
+					<div class='donate-turbo-right-text'>
+						<ul class='donate-turbo-right-list'>
+							<li class='donate-turbo-right-textelem' ng-bind='turboBlueFirstText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboBlueSecondText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboBlueThirdText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboBlueFourthText'></li>
+						</ul>
+					</div>
+					<div class='donate-turbo-right-but center' id="iturbos_2_price" ng-click="order('iturbos_2')"></div>
+				</td>
+			</tr>
+		</table>
+
+		<!-- turbo hard -->
+		<table class='donate-turbo-block donate-turbo-hard' id='turbos_3_name'>
+			<tr>
+				<td class='donate-turbo-left left'>
+					<div class='donate-turbo-left-circle center inline relative'>
+						<img class='donate-turbo-left-background' src="app/pages/donate/images/donate_turbo_hard_bg.png">
+						<img class='donate-turbo-image-hard relative' src='app/pages/donate/images/donate_turbo_hard.png'>
+					</div>
+				</td>
+				<td class='donate-turbo-right left'>
+					<div class='donate-turbo-right-head' ng-bind='turboHardHeadText'></div>
+					<div class='donate-turbo-right-text'>
+						<ul class='donate-turbo-right-list'>
+							<li class='donate-turbo-right-textelem' ng-bind='turboRedFirstText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboRedSecondText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboRedThirdText'></li>
+							<li class='donate-turbo-right-textelem' ng-bind='turboRedFourthText'></li>
+						</ul>
+					</div>
+					<div class='donate-turbo-right-but center' id="turbos_3_price" ng-click="order('turbos_3')"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class='donate-select-block'>
+	<a href='#/donate/diamonds'><div class='donate-select-but inline' id='diamondsSel'>
+		<div class='donate-select-text center' ng-bind='diamondsButText'></div>
+	</div></a>
+	<a href='#/donate/premium'><div class='donate-select-but inline' id='premiumSel'>
+		<div class='donate-select-text center' ng-bind='premiumButText'></div>
+	</div></a>
+	<a href='#/donate/turbo'><div class='donate-select-but inline' id='turboSel'>
+		<div class='donate-select-text center' ng-bind='turboButText'></div>
+	</div></a>
+</div>

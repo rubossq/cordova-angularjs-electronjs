@@ -1,0 +1,253 @@
+/*
+* main color  		#141218
+* time color 		#221E28
+* blue color 		#3B92ED
+*/
+
+
+.wrapper{
+	background-color: #141218;
+}
+
+/* UPLOAD POSTS DOTS */
+.more-block > div{
+	background-color: #141218;
+}
+
+/* INIT BLOCK*/
+.init-block{
+	background-color: #141218;
+}
+
+.init-logo{
+	width: 150px;
+}
+
+/* BID ON SINGLE POST */
+.bid-dialog-coins{
+	color: #141218;
+}
+
+/* SPEED MODE DIALOG */
+.speedup-hour-active{
+	background-color: #141218;
+}
+
+/* LONG TAB */
+.longtab-topbar{
+	background-color: #141218;
+}
+
+.longtab-select-all{
+	color: #141218;
+}
+
+.longtab-bid-wrap{
+	background-color: #3B92ED;
+}
+
+.longtab-diamonds-text{
+	color: #EC6A37;
+}
+
+/* HEADER */
+.header{
+	background-color: #141218;
+}
+
+.header-right-update{
+	background-color: #2D2D2D;
+}
+
+.header-right-update-running{
+	background-color: #3B92ED;
+}
+
+/* NAVIGATION */
+.nav-block{
+	background-color: #141218;
+}
+
+.nav-news-counter{
+	background-color: #3D9AFA;
+	border: 2px solid #141218;
+}
+
+.nav-earn-block > div{
+	background-color: #3B92ED;
+}
+
+.nav-earn-text-status{
+	color: #3B92ED;
+}
+
+/* BUT GO TO EARN */
+.goearn-but-block{
+	background-color: #141218;
+}
+
+/* LOGIN VIEW */
+.login-block{
+	background-color: #141218;
+}
+
+.login-logo-image{
+	width: 120px;
+}
+
+.login-auth{
+	background-color: #FFFFFF;
+	color: #141218;
+}
+
+.login-trouble-text{
+	display: block;
+}
+
+.login-bottom-text{
+	display: block;
+}
+
+/* MAIN VIEW */
+.main-avatar{
+	background-color: #141218;
+}
+
+.main-earn-progress-bar{
+	background-color: #141218;
+}
+
+.main-earn-wait-time{
+	color: #141218;
+}
+
+.main-transition-ref-block{
+	background-color: #141218;
+}
+
+/* LONG TAB BUT IN QUEST */
+.quest-active-mark{
+	background-color: #3B92ED;
+}
+
+/* BID LIKES AND FOLLOWERS VIEWS */
+.bid-but-active{
+	background-color: #141218;
+}
+
+.bid-select-circle-active{
+	background-color: #141218;
+}
+
+.bid-like-coins{
+	color: #141218;
+}
+
+.bid-subs-coins{
+	color: #141218;
+}
+
+.bid-subs-accept-but{
+	background-color: #141218;
+}
+
+/* DONATE VIEW */
+.donate-select-active{
+	background-color: #141218;
+}
+
+.donate-select-but{
+	color: #141218;
+}
+
+.donate-buy{
+	background-color: #EC6A38;
+}
+
+/* TOP VIEW */
+.top-topbar{
+	background-color: #141218;
+}
+
+.top-info{
+	background-color: #141218;
+}
+
+.top-time-block{
+	background-color: #221E28;
+}
+
+/* SETTINGS VIEW */
+.settings-topbar{
+	background-color: #141218;
+}
+
+.settings-version-text{
+	color: #141218;
+}
+
+.settings-version-but{
+	background-color: #141218;
+}
+
+/* OTHERACC VIEW */
+.otheracc-topbar{
+	background-color: #141218;
+}
+
+.otheracc-avatar{
+	background-color: #141218;
+}
+
+/* AUTOTASK VIEW */
+.autotask-topbar{
+	background-color: #141218;
+}
+
+/* AUTHTROUBLE VIEW */
+.authtrouble-topbar{
+	background-color: #141218;
+}
+
+.authtrouble-bottom-but{
+	background-color: #141218;
+}
+
+/* LVLPRIZE VIEW */
+.lvlprize-topbar{
+	background-color: #141218;
+}
+
+/* PAYMENTWALL VIEW */
+.paymentwall-topbar{
+	background-color: #141218;
+}
+
+/* LIQPAY VIEW */
+.liqpay-topbar{
+	background-color: #141218;
+}
+
+/* PURCHASE VIEW */
+.purchase-topbar{
+	background-color: #141218;
+}
+
+/* REFERRAL VIEW */
+.referral-topbar{
+	background-color: #141218;
+}
+
+.referral-counttime{
+	background-color: #221E28;
+}
+
+/* REFERRAL INFO VIEW */
+.referral-info-topbar{
+	background-color: #141218;
+}
+
+/* CAPTCHA VIEW */
+.captcha-top{
+	background-color: #141218;
+}

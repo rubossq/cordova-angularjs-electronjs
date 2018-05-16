@@ -1,0 +1,13 @@
+<div class='captcha-block center'>
+	<div class='captcha-top relative'>
+		<div class='captcha-top-back inline' ng-click='back()'><img class='captcha-top-back-image' src="images/back.png"></div>
+		<img class='captcha-top-image' src="app/pages/captcha/images/captcha_lock.png">
+	</div>
+	<div class='captcha-text' ng-bind='topText'></div>
+	<div><img class='captcha-code' ng-src="{{captchaImage}}"></div>
+	<div>
+		<input class='captcha-input center' ng-model='captchaCode' ng-enter='checkCaptcha()' type="number" placeholder='{{phText}}' ng-focus='hideError()'>
+	</div>
+	<div class='captcha-error none' ng-bind='errText'></div>
+	<div class='captcha-but inline' ng-click='checkCaptcha()' ng-bind='butText'></div>
+</div>

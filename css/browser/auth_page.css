@@ -1,0 +1,73 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+/* middle and top blocks */
+._nvyyp{
+	padding: 0 !important;
+	border: none !important;
+}
+/* inside top block */
+._p8ymb{
+	height: 100% !important;
+	margin-top: 56px !important;
+}
+._dyp7q{
+	display: none !important;
+}
+/* bottom block */
+._m8ogu{
+	display: none !important;
+}
+/* "or" text */ 
+._m241u{
+	display: none !important;
+}
+
+/* link in input */ 
+._j4ox0{
+	display: none !important;
+}
+
+/* AUTH BUTTON */
+/* outside block */
+._rz1lq{
+	margin: 23px 13px 0 13px !important;
+}
+
+button{
+	font-size: 18px !important;
+	line-height: 52px !important;
+	padding: 0 !important;
+	border-radius: 8px !important;
+	font-family: 'Roboto', sans-serif !important;
+	font-weight: 500 !important;
+	border: none !important;
+	background-color: #5AA536 !important;
+}
+/* AUTH BUTTON E */
+
+/* INPUTS */
+._ccek6{
+	margin: 0 13px !important;
+}
+
+._ccek6:first-child ._kp5f7{
+	border-top-left-radius: 8px !important;
+	border-top-right-radius: 8px !important;
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	margin-bottom: -2px !important;
+}
+
+._kp5f7{
+	border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border: 1px solid #BEBEBE !important;
+    line-height: 50px !important;
+	padding: 0 0 0 20px !important;
+	font-size: 18px !important;
+	color: #9C9C9C !important;
+	background-color: #FFFFFF !important;
+}
+/* INPUTS E */
+

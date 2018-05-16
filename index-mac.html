@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' http://instagram.starfamous.ru https://ajax.googleapis.com https://instagram.starfamous.ru 'unsafe-inline' 'unsafe-eval'">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<!-- <script src="http://jsconsole.com/remote.js?BD62D171-F962-41D5-AEC3-345173B4D0E4"></script>-->
+	<title>Meteor Boost</title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/colors.css"/>
+	<link rel="stylesheet" href="css/desktop_style.css"/>
+</head>
+<body>
+	<div class="wrapper">
+
+		<!-- CUSTOM ADVERTISE -->
+		<div ng-controller='mineAdCtrl'>
+			<div class='minead-block none' ng-click='handleAd(0)'>
+				<div class='minead-content'>
+					<div class='minead-top relative'>
+						<img class='minead-top-background'>
+						<img class='minead-top-exit' src='app/parts/minead/images/minead_exit.png' ng-click='handleAd(0)'>
+					</div>
+					<div class='minead-bottom center relative'>
+						<img class='minead-top-logo' src=''>
+						<div class='minead-bottom-head'></div>
+						<div class='minead-bottom-rate'>
+							<img class='minead-bottom-rate-image inline' src='app/parts/minead/images/minead_star.png'>
+							<img class='minead-bottom-rate-image inline' src='app/parts/minead/images/minead_star.png'>
+							<img class='minead-bottom-rate-image inline' src='app/parts/minead/images/minead_star.png'>
+							<img class='minead-bottom-rate-image inline' src='app/parts/minead/images/minead_star.png'>
+							<img class='minead-bottom-rate-image inline' src='app/parts/minead/images/minead_star.png'>
+							<div class='minead-bottom-rate-text inline'></div>
+						</div>
+						<div class='minead-bottom-text1'></div>
+						<div class='minead-bottom-text2'></div>
+						<div class='minead-bottom-but inline' ng-bind='installButText' ng-click='handleAd(1)'></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- DIALOGS -->
+		<div ng-controller='dialogCtrl'>
+			<!-- STARTED BLOCK -->
+			<table class='init-block'>
+				<tr>
+					<td class='center'>
+						<img class='init-logo' src='images/logo.png'>
+					</td>
+				</tr>
+			</table>
+
+
+			<!-- LOADING -->
+			<table class='loading-block relative none'>
+				<tr>
+					<td class='center'>
+						<img class='loading-image' src='images/ring.svg'>
+						<div class='loading-close inline none' ng-click='criticHideLoading()'>
+							<img class='loading-close-image' src="images/cross_white.png">
+						</div>
+					</td>
+				</tr>
+			</table>
+
+
+			<!-- TOAST -->
+			<div class='toast-block center none'>
+				<div class='toast-content inline' id='toastMes'></div>
+			</div>
+
+
+			<!-- PRIVATEACC -->
+			<table class='privateacc-block none' ng-click='hidePrivateAcc()'>
+				<tr>
+					<td class='center'>
+						<div class='privateacc-content inline'>
+							<div class='privateacc-head' ng-bind-html='privateAccHead | prepareHtml'></div>
+							<div class='privateacc-text' ng-bind='privateAccText'></div>
+							<div class='privateacc-but' ng-bind='privateAccBut' ng-click='hidePrivateAcc()'></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+
+			<!-- DIALOG FOR BID LIKES ON SINGLE QUESTION -->
+			<table class='bid-dialog-block none' ng-click='hideDialogBidLikes()'>
+				<tr>
+					<td class='center'>
+						<div class='bid-dialog-content inline'>
+							<input ng-model='bidLikeId' type='hidden' value=''>
+							<div class='center'>
+								<input ng-change='changePrice()' ng-enter='bid()' ng-model='targetCountDialog' type='text' class='bid-dialog-input center' placeholder='0'>
+							</div>
+							<div class='bid-dialog-coins center'>
+								{{diamondsText}} - <span class='bid-dialog-coins-price'>{{price}}</span> 
+								<img class='bid-dialog-coins-image' src="images/diamonds_red.png">
+							</div>
+							<div class='center'>
+								<div class='bid-dialog-but' ng-click="bid()" ng-bind='sendText'></div>
+								<div class='bid-dialog-but none'><img class='but-anim' src="images/ripple.svg"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+
+			<!-- BID MORE LIKES OR FOLLOWERS -->
+			<table class='bidmore-dialog-block none' ng-click='hideBidMore()'>
+				<tr>
+					<td class='center'>
+						<div class='bidmore-dialog-content inline'>
+							<div class='bidmore-dialog-head' ng-bind='bidMoreHead'></div>
+							<div class='center'>
+								<input ng-change='changeMorePrice()' ng-enter='bidMore()' ng-model='bidMoreCount' type='text' class='bidmore-dialog-input center' placeholder='0'>
+							</div>
+							<div class='bidmore-dialog-coins center'>
+								{{diamondsText}} - <span class='bidmore-dialog-coins-price'>{{morePrice}}</span> 
+								<img class='bidmore-dialog-coins-image' src="images/diamonds_red.png">
+							</div>
+							<div class='center'>
+								<div class='bidmore-dialog-but' ng-click="bidMore()" ng-bind='sendText'></div>
+								<div class='bidmore-dialog-but none'><img class='but-anim' src="images/ripple.svg"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+
+			<!-- ENTER NICKNAME -->
+			<table class='enternick-block none' ng-click='hideEnterNick()'>
+				<tr>
+					<td class='center'>
+						<div class='enternick-content inline'>
+							<div class='enternick-head' ng-bind='enterNickHead'></div>
+							<input ng-model='inputNickname' ng-enter='sendEnterNick()' type='text' class='enternick-input center' placeholder='{{enterNickPh}}'>
+							<div class='center'>
+								<div class='enternick-but' ng-bind='enterNickBut' ng-click='sendEnterNick()'></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			
+
+			<!-- PAY DIALOG -->
+			<table class='paydialog-block none' ng-click='hidePayDialog()'>
+				<tr>
+					<td class='center'>
+						<div class='paydialog-content inline'>
+							<table class='paydialog-table'>
+								<tr>
+									<td class='paydialog-kind left'>
+										<div ng-bind='payText'></div>
+									</td>
+									<td class='paydialog-price'>
+										<div ng-bind='payPrice'></div>
+									</td>
+								</tr>
+								<tr class='paydialog-email-block' ng-click='switchPayEmail()'>
+									<td class='paydialog-email-switcher left' colspan='2'>
+										<div class='paydialog-email-switcher-text inline' ng-bind='emailText'></div>
+										<img class='paydialog-email-switcher-image' src="app/parts/dialog/images/pay_switcher.png">
+									</td>
+								</tr>
+							</table>
+							<table class='paydialog-switcher none'>
+								<tr>
+									<td>
+										<input class='paydialog-input center' ng-enter='setEmail()' type='email' ng-model='userEmail'>
+									</td>
+									<td class='paydialog-right right'>
+										<div class='paydialog-but inline center' ng-click='setEmail()' ng-bind='payEmailOk'></div>
+									</td>
+								</tr>
+							</table>
+
+							<div class='paydialog-bottom left'>
+								<img class='paydialog-logo' src="app/parts/dialog/images/pay_logo.png">
+								<div class='paydialog-buy inline center' ng-bind='payBuy' ng-click='buy()'></div>
+								<div class='paydialog-buy-anim inline center none'><img class='but-anim' src="images/ripple.svg"></div>
+							</div>
+							<div class='clear'></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+
+			<!-- SHOW GOODS -->
+			<table class='goods-block none' ng-click='hideGoods()'>
+				<tr>
+					<td class='center'>
+						<div class='goods-content inline'>
+							<div class='goods-head' ng-bind='goodsMain'></div>
+							<div class='goods-list'>
+								<table>
+									<tr ng-repeat='good in goods' style='background-color: {{good.color}}'>
+										<td class='goods-left'>
+											<img class='{{good.class}}' ng-src='{{good.src}}'>
+										</td>
+										<td class='goods-middle left'>
+											<div class='goods-text'>{{good.name}}</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class='goods-head' ng-bind='goodsGift'></div>
+							<table class='goods-gift'>
+								<tr>
+									<td class='goods-left'>
+										<img class='goods-image-diamonds' src='images/diamonds_red.png'>
+									</td>
+									<td class='goods-middle left'>
+										<div class='goods-text'></div>
+									</td>
+								</tr>
+							</table>
+							<div class='goods-but inline' ng-click='hideGoods()' ng-bind='goodsBut'></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<!-- SPEEDUP DIALOG -->
+			<table class='speedup-block none' ng-click='hideSpeedUp()'>
+				<tr>
+					<td class='center'>
+						<div class='speedup-content inline'>
+							<div class='speedup-head' ng-bind='speedHead'></div>
+							<div class='speedup-hour speedup-hour-active' ng-bind='speed1Hour' ng-click='selectSpeedButtons(1)'></div>
+							<div class='speedup-hour' ng-bind='speed2Hour' ng-click='selectSpeedButtons(2)'></div>
+							<div class='speedup-hour' ng-bind='speed3Hour' ng-click='selectSpeedButtons(3)'></div>
+							<div class='center'>
+								<div class='speedup-but inline' ng-bind='speedBut' ng-click='startSpeedUp()'></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+
+		<!-- LONG TAB -->
+		<div class='longtab-block none' ng-controller='longtabCtrl'>
+			<table class='longtab-topbar'>
+				<tr>
+					<td class='longtab-close' ng-click='close()'>
+						<img class='longtab-close-image' src="images/cross_white.png">
+					</td>
+					<td class='longtab-select center'>
+						<div class='longtab-select-center relative inline' ng-click='toogleSelectAll()'>
+							<div class='longtab-select-text inline'>{{selectedText}} <span class='longtab-select-num'></span></div>
+							<img class='longtab-select-image' src="app/parts/longtab/images/longtab_select.png">
+							<div class='longtab-select-all left none'>
+								<div class='longtab-select-but' ng-click='selectAllFlags()' ng-bind='selectAllText'></div>
+								<div class='longtab-select-but' ng-click='clearAllFlags()' ng-bind='clearAllText'></div>
+							</div>
+						</div>
+					</td>
+					<td class='longtab-bid' ng-click='showLongtabDialog()'>
+						<div class='longtab-bid-wrap center'>
+							<img class='longtab-bid-image' src="app/parts/longtab/images/longtab_bid.png">
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class='longtab-content'>
+				<div class='longtab-info'>
+					<div class='longtab-content-margin'></div>
+					<div class='quest-block center'>
+						<div ng-repeat="post in longPosts" class='quest-elem-block relative inline' data-status='0' ng-click='flagPost($index)'>
+							<div class='quest-active-block none'></div>
+							<div class='quest-likes-field inline'>
+								<div class='quest-likes-text inline'>{{post.getLikesCount()}}</div>
+								<img class='quest-likes-image inline' src="images/quest_like.png">
+								{{setPosts($index, post.getThumbnail())}}
+							</div>
+							<div class='quest-active-mark none'><img class='quest-active-image' src='images/check_mark.png'></div>
+						</div>
+					</div>
+					<div class='clear'></div>
+
+					<div class='longtab-more-but more-but center none' ng-click='showMore()'>
+						<div class='longtab-more-text more-text' ng-bind='showMoreBut'></div>
+						<img class='longtab-more-anim more-anim none' src='images/ripple.svg'>
+					</div>
+
+					<div class='longtab-more-block more-block center none'>
+						<div class="more-elem1 inline"></div>
+						<div class="more-elem2 inline"></div>
+						<div class="more-elem3 inline"></div>
+						<div class="more-elem4 inline"></div>
+					</div>
+				</div>
+			</div>
+
+			<table class='longtab-dialog-block none' ng-click='hideLongtabDialog()'>
+				<tr>
+					<td class='center'>
+						<div class='longtab-dialog-content inline'>
+							<div class='center'>
+								<input ng-change='changePrice()' ng-enter='bid()' ng-model='longtabCount' type='text' class='longtab-dialog-input center' 
+								placeholder='{{dialogPh}}'>
+							</div>
+							<div class='longtab-dialog-coins center'>
+								{{diamondsText}} - <span class='longtab-dialog-coins-price'>{{price}}</span> 
+								<img class='longtab-dialog-coins-image' src="images/diamonds_red.png">
+							</div>
+							<div class='center'>
+								<div class='longtab-dialog-but' ng-click="bid()" ng-bind='sendText'></div>
+								<div class='longtab-dialog-but none'><img class='but-anim' src="images/ripple.svg"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class='longtab-diamonds-block center'>
+				<img class='longtab-diamonds-image' src="images/diamonds_red.png">
+				<div class="longtab-diamonds-text inline">{{deposit}}</div>
+			</div>
+		</div>
+
+
+		<!-- TUTORIAL -->
+		<div class='guide-block'>
+			<div class='guide-view'></div>
+			<div class='guide-dialog center'>
+				<div class='guide-text'></div>
+				<div class='guide-buttons'>
+					<div class='guide-skip inline'></div>
+					<div class='guide-but inline'></div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- MAIN CONTENT -->
+		<div class="content">
+
+			<div ng-controller="navCtrl">
+				<div class='navigation'>
+					<!-- HEADER -->
+					<table class='header none'>
+						<tr>
+							<td class='header-left'>
+								<div class='header-left-text' ng-bind='locationTitle'></div>
+							</td>
+							<td class='header-right'>
+								<div class='header-right-update inline center' ng-click='update()'>
+									<img class='header-right-update-image' src='app/parts/nav/images/header_update_desktop.png'>
+								</div>
+								<div class='header-right-diamonds inline' ng-click='navigate("earn")'>
+									<div class='header-right-diamonds-num inline'>{{deposit}}</div>
+									<img class='header-right-diamonds-image' src="images/diamonds_white.png">
+								</div>
+								<div class='header-right-settings inline' ng-click='navigate("settings")'>
+									<img class='header-right-settings-image' src="app/parts/nav/images/header_settings.png">
+								</div>
+							</td>
+						</tr>
+					</table>
+
+					<!-- NAV BLOCK -->
+					<div class='nav-block none'>
+						<div class='nav-logo' ng-click='navigate("main")'></div>
+						<div class='nav-elem-switcher left' ng-click='switchPanel()'>
+							<img class='nav-elem-switcher-image' src='app/parts/nav/images/nav_switch_desktop.png'>
+						</div>
+						<div class='nav-elem-block inline' ng-click='navigate("main")'>
+							<div class='nav-elem'>
+								<img class='nav-elem-image nav-elem-main' src="app/parts/nav/images/nav_main_active.png">
+								<div class='nav-elem-text inline' ng-bind='navMain'></div>
+							</div>
+						</div>
+						<div class='nav-elem-block inline' ng-click='navigate("news")'>
+							<div class='nav-elem'>
+								<img class='nav-elem-image nav-elem-news' src="app/parts/nav/images/nav_news_active.png">
+								<div class='nav-elem-text inline' ng-bind='navNews'></div>
+								
+								<div class='nav-news-block center inline'>
+									<div class='nav-news-counter center none' id='newsCounter'><div class='nav-news-counter-num'></div></div>
+								</div>
+							</div>
+						</div>
+						<div class='nav-elem-block inline' ng-click='navigate("earn")'>
+							<div class='nav-elem'>
+								<img class='nav-elem-image nav-elem-earn' src="images/diamonds_white.png">
+								<div class='nav-elem-text inline' ng-bind='navEarn'></div>
+							</div>
+						</div>
+						<div class='nav-elem-block inline' ng-click='navigate("bid_like")'>
+							<div class='nav-elem'>
+								<img class='nav-elem-image nav-elem-bid' src="app/parts/nav/images/nav_bid_active.png">
+								<div class='nav-elem-text inline' ng-bind='navBid'></div>
+							</div>
+						</div>
+						<div class='nav-elem-block inline' ng-click='navigate("tasks")'>
+							<div class='nav-elem'>
+								<img class='nav-elem-image nav-elem-tasks' src="app/parts/nav/images/nav_tasks_active.png">
+								<div class='nav-elem-text inline' ng-bind='navTasks'></div>
+							</div>
+						</div>
+						<div class='nav-elem-block inline' ng-click='navigate("donate/diamonds")'>
+							<div class='nav-elem'>
+								<img class='nav-elem-image nav-elem-donate' src="app/parts/nav/images/nav_donate_active.png">
+								<div class='nav-elem-text inline' ng-bind='navDonate'></div>
+							</div>
+						</div>
+
+						<div class='nav-earn-execution center'>
+							<div class='nav-earn-block'>
+								<div class="nav-earn-elem1 inline"></div>
+								<div class="nav-earn-elem2 inline"></div>
+								<div class="nav-earn-elem3 inline"></div>
+								<div class="nav-earn-elem4 inline"></div>
+							</div>
+							<div class='nav-earn-text'>{{navEarn}}<br>
+								<span class='nav-earn-text-status' ng-click='navigate("earn")' ng-bind='navEarnStatus'></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BUT TO EARN -->
+				<a href="#/earn" id='goEarnBut' ng-click='showAd()'><div class='goearn-but-block center'>
+					<img class='goearn-but-image' src="images/diamonds_white.png"></div>
+				</a>
+				
+			</div>
+
+			<!-- ALL VIEWS -->
+			<div class='frame-wrap'>
+				<div id='frame' ng-view></div>
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+	<script type="text/javascript" src="js/main/utils/analytics.js"></script>
+	<script src="js/lib/base.js"></script>
+	<script type="text/javascript" src="js/main/utils/PlatformManager.js"></script>
+	<script src="js/main/utils/Constant.js"></script>
+	<script src="js/main/utils/Config.js"></script>
+	<script src="js/main/utils/PlatformConfig.js"></script>
+	
+	<script>PlatformManager.moduleBeforePrepare();</script>
+
+
+	<script src="js/main/utils/Log.js"></script>
+	<script src="js/main/utils/Lang.js"></script>
+	<script src="js/main/user/Quest.js"></script>
+	<script src="js/main/user/Task.js"></script>
+	<script src="js/main/user/Bid.js"></script>
+	<script src="js/main/user/Post.js"></script>
+	<script src="js/main/common/AuthData.js"></script>
+	<script src="js/main/utils/Secure.js"></script>
+	<script src="js/main/user/Cash.js"></script>
+	<script src="js/main/utils/Balance.js"></script>
+	<script src="js/main/common/Connector.js"></script>
+	<script src="js/main/common/MineAd.js"></script>
+	<script src="js/main/common/MineApp.js"></script>
+	<script src="js/main/common/Response.js"></script>
+	<script src="js/main/user/UserInfo.js"></script>
+	<script src="js/main/utils/DataManager.js"></script>
+	<script src="js/main/utils/BidInfo.js"></script>
+	<script src="js/main/common/Browser.js"></script>
+	<script src="js/main/common/Bot.js"></script>
+	<script src="js/main/user/Top.js"></script>
+	<script src="js/main/user/User.js"></script>
+	<script src="js/main/user/News.js"></script>
+	<script src="js/main/user/XpInfo.js"></script>
+	<script src="js/main/common/Manager.js"></script>
+
+	<script src="js/gap/app/Embed.js"></script>
+	<script src="js/main/common/Action.js"></script>
+	<script src="js/gap/app/EmbedController.js"></script>
+	<!--<script src="http://insta.starfamous.ru/js/EmbedEntity_4.0.0.js"></script>-->
+
+	<script src="js/gap/app/EmbedEntity.js"></script>
+
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<script src="js/lib/jquery.min.js"></script>
+	
+	<script type='application/javascript' src='js/lib/fastclick.js'></script>
+	<script src="js/lib/enterpress.js"></script>
+	<script src="js/lib/longpress.js"></script>
+	<script src="js/lib/Swiper.js"></script>
+	<script src="js/lib/Tour.js"></script>
+
+	<script src="js/main/utils/define_modules.js"></script>
+
+	<script src="app/services/advertising.js"></script>
+	<script src="app/services/main.js"></script>
+	<script src="app/services/store.js"></script>
+	<script src="app/services/utils.js"></script>
+	<script src="app/services/auto.js"></script>
+
+	<script src="app/common_filters.js"></script>
+	<script src="app/common_langs.js"></script>
+
+	<!-- DIALOG PART -->
+	<script src="app/parts/dialog/dialog_controller.js"></script>
+	<script src="app/parts/dialog/dialog_services_view.js"></script>
+	<script src="app/parts/dialog/dialog_lang.js"></script>
+
+	<!-- LONG TAB PART -->
+	<script src="app/parts/longtab/longtab_controller.js"></script>
+	<script src="app/parts/longtab/longtab_services_view.js"></script>
+	<script src="app/parts/longtab/longtab_lang.js"></script>
+
+	<!-- MINEAD PART -->
+	<script src="app/parts/minead/minead_controller.js"></script>
+	<script src="app/parts/minead/minead_services_view.js"></script>
+	<script src="app/parts/minead/minead_lang.js"></script>
+
+	<!-- NAVIGATION PART -->
+	<script src="app/parts/nav/nav_controller.js"></script>
+	<script src="app/parts/nav/nav_services_view.js"></script>
+	<script src="app/parts/nav/nav_lang.js"></script>
+
+	<!-- УДАЛИТЬ НАХУЙ ЭТОТ БЫДЛОКОД-->
+	<script src="app/pages/authtrouble/authtrouble_controller.js"></script>
+	<script src="app/pages/authtrouble/authtrouble_services_view.js"></script>
+	<script src="app/pages/authtrouble/authtrouble_lang.js"></script>
+
+	<script src="app/pages/autotask/autotask_controller.js"></script>
+	<script src="app/pages/autotask/autotask_services_view.js"></script>
+	<script src="app/pages/autotask/autotask_lang.js"></script>
+
+	<script src="app/pages/bid_like/bid_like_controller.js"></script>
+	<script src="app/pages/bid_like/bid_like_services_view.js"></script>
+	<script src="app/pages/bid_like/bid_like_lang.js"></script>
+
+	<script src="app/pages/bid_subs/bid_subs_controller.js"></script>
+	<script src="app/pages/bid_subs/bid_subs_services_view.js"></script>
+	<script src="app/pages/bid_subs/bid_subs_lang.js"></script>
+
+	<script src="app/pages/captcha/captcha_controller.js"></script>
+	<script src="app/pages/captcha/captcha_services_view.js"></script>
+	<script src="app/pages/captcha/captcha_lang.js"></script>
+
+	<script src="app/pages/donate/donate_controller.js"></script>
+	<script src="app/pages/donate/donate_services_view.js"></script>
+	<script src="app/pages/donate/donate_lang.js"></script>
+
+	<script src="app/pages/donate_vip/donate_vip_controller.js"></script>
+	<script src="app/pages/donate_vip/donate_vip_services_view.js"></script>
+	<script src="app/pages/donate_vip/donate_vip_lang.js"></script>
+
+	<script src="app/pages/earn/earn_controller.js"></script>
+	<script src="app/pages/earn/earn_services_view.js"></script>
+	<script src="app/pages/earn/earn_lang.js"></script>
+
+	<script src="app/pages/login/login_controller.js"></script>
+	<script src="app/pages/login/login_services_view.js"></script>
+	<script src="app/pages/login/login_lang.js"></script>
+
+	<script src="app/pages/lvlprize/lvlprize_controller.js"></script>
+	<script src="app/pages/lvlprize/lvlprize_services_view.js"></script>
+	<script src="app/pages/lvlprize/lvlprize_lang.js"></script>
+	<script src="app/pages/lvlprize/lvlprize_filter.js"></script>
+
+	<script src="app/pages/main/main_controller.js"></script>
+	<script src="app/pages/main/main_services_view.js"></script>
+	<script src="app/pages/main/main_lang.js"></script>
+
+	<script src="app/pages/news/news_controller.js"></script>
+	<script src="app/pages/news/news_services_view.js"></script>
+	<script src="app/pages/news/news_lang.js"></script>
+
+	<script src="app/pages/otheracc/otheracc_controller.js"></script>
+	<script src="app/pages/otheracc/otheracc_services_view.js"></script>
+	<script src="app/pages/otheracc/otheracc_lang.js"></script>
+
+	<script src="app/pages/paysystem/paymentwall/paymentwall_controller.js"></script>
+	<script src="app/pages/paysystem/paymentwall/paymentwall_services_view.js"></script>
+
+	<script src="app/pages/paysystem/liqpay/liqpay_controller.js"></script>
+	<script src="app/pages/paysystem/liqpay/liqpay_services_view.js"></script>
+
+	<script src="app/pages/purchase/purchase_controller.js"></script>
+	<script src="app/pages/purchase/purchase_services_view.js"></script>
+	<script src="app/pages/purchase/purchase_lang.js"></script>
+
+	<script src="app/pages/referral/referral_controller.js"></script>
+	<script src="app/pages/referral/referral_services_view.js"></script>
+	<script src="app/pages/referral/referral_lang.js"></script>
+
+	<script src="app/pages/referral_info/referral_info_controller.js"></script>
+	<script src="app/pages/referral_info/referral_info_services_view.js"></script>
+	<script src="app/pages/referral_info/referral_info_lang.js"></script>
+
+	<script src="app/pages/settings/settings_controller.js"></script>
+	<script src="app/pages/settings/settings_services_view.js"></script>
+	<script src="app/pages/settings/settings_lang.js"></script>
+
+	<script src="app/pages/tasks/tasks_controller.js"></script>
+	<script src="app/pages/tasks/tasks_services_view.js"></script>
+	<script src="app/pages/tasks/tasks_lang.js"></script>
+	<script src="app/pages/tasks/tasks_filter.js"></script>
+
+	<script src="app/pages/top/top_controller.js"></script>
+	<script src="app/pages/top/top_services_view.js"></script>
+	<script src="app/pages/top/top_lang.js"></script>
+	
+	<script src="app/app.js"></script>
+
+	
+	<script type="text/javascript" src="js/lib/Serpent.js"></script>
+	<script type="text/javascript" src="js/lib/rijndael.js"></script>
+	<script type="text/javascript" src="js/lib/mcrypt.js"></script>
+	
+	<script type="text/javascript" src="js/main/utils/index.js"></script>
+	
+
+	<script>PlatformManager.moduleAfterPrepare();</script>
+
+	<script type="text/javascript">
+		application.initialize();
+	</script>
+</html>

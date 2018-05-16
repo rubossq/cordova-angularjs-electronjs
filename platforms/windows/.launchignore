@@ -1,0 +1,13 @@
+.launchignore!
+.htaccess
+checksumm!
+files!
+checkstatus.txt!
+launcher/
+Thumbs.db!
+platforms/
+app/services/store-windows.js~
+js/main/utils/PlatformConfig-windows.js~
+index-windows.html~
+cordova-android/
+cordova-ios/

@@ -1,0 +1,949 @@
+/* MINE ADVERTISING: B */
+.minead-block{
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+.minead-content{
+	width: auto;
+	height: auto;
+	top: 82px;
+    left: 77px;
+    right: 77px;
+    bottom: 77px;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+.minead-top-background{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.minead-top-logo{
+	width: 119px;
+	height: 119px;
+	top: -70px;
+	border-radius: 36px;
+	border: 10px solid #FFFFFF;
+}
+
+.minead-top-exit{
+	display: none;
+}
+
+.minead-bottom-head{
+	padding: 80px 0 10px 0;
+}
+
+.minead-bottom-text1{
+	margin: 0 50px 15px 50px;
+}
+
+.minead-bottom-but{
+	cursor: pointer;
+}
+/* MINE ADVERTISING: E */
+
+
+/* TELL PRIVATE ACC: B */
+.privateacc-block, .privateacc-but{
+	cursor: pointer;
+}
+
+.privateacc-content{
+	cursor: auto;
+}
+/* TELL PRIVATE ACC: E */
+
+
+/* BID ON SINGLE POST: B */
+.bid-dialog-block, .bid-dialog-but{
+	cursor: pointer;
+}
+
+.bid-dialog-content{
+	cursor: auto;
+}
+/* BID ON SINGLE POST: E */
+
+
+/* BID MORE TO TASK: B */
+.bidmore-dialog-block, .bidmore-dialog-but{
+	cursor: pointer;
+}
+
+.bidmore-dialog-content{
+	cursor: auto;
+}
+/* BID MORE TO TASK: E */
+
+
+/* INPUT NICKNAME: B */
+.enternick-block, .enternick-but{
+	cursor: pointer;
+}
+
+.enternick-content{
+	cursor: auto;
+}
+/* INPUT NICKNAME: E */
+
+
+/* PAY DIALOG: B */
+.paydialog-block, .paydialog-email-block, .paydialog-right, .paydialog-buy{
+	cursor: pointer;
+}
+
+.paydialog-content{
+	cursor: auto;
+}
+/* PAY DIALOG: E */
+
+
+/* SHOW GOODS: B */
+.goods-block, .goods-but{
+	cursor: pointer;
+}
+
+.goods-content{
+	cursor: auto;
+}
+/* SHOW GOODS: E */
+
+
+/* SPEED UP: B */
+.speedup-block, .speedup-hour, .speedup-but{
+	cursor: pointer;
+}
+
+.speedup-content{
+	cursor: auto;
+}
+/* SPEED UP: E */
+
+
+/* LONG TAB: B */
+.longtab-topbar{
+	height: 80px;
+}
+
+.longtab-select-text{
+	font-size: 20px;
+}
+
+.longtab-close, .longtab-select-center, .longtab-select-but, .longtab-bid, .longtab-dialog-block, .longtab-dialog-but{
+	cursor: pointer;
+}
+
+.longtab-dialog-content{
+	cursor: auto;
+}
+/* LONG TAB: E */
+
+
+/* TUTORIAL: B */
+.guide-dialog{
+	padding: 0;
+	right: 0;
+}
+
+.guide-text{
+	font-size: 20px;
+}
+
+.guide-but, .guide-skip{
+	cursor: pointer;
+	font-size: 23px;
+}
+/* TUTORIAL: E */
+
+
+/* HEADER: B */
+.header{
+	height: 80px;
+}
+
+.header-left{
+	padding-left: 319px;
+}
+
+.header-left-text{
+	font-size: 20px;
+}
+
+.header-right-update, .header-right-diamonds, .header-right-settings{
+	cursor: pointer;
+}
+
+.header-right-update{
+	width: 36px;
+	height: 36px;
+	vertical-align: top;
+	margin-top: 2px;
+	border-radius: 50%;
+	margin-right: 5px;
+	font-size: 0;
+
+	-webkit-animation: updateWait 11s linear 3s infinite;
+	animation: updateWait 11s linear 3s infinite;
+}
+@-webkit-keyframes updateWait{
+	0%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	3%{
+		-webkit-transform: rotate(50deg);
+		transform: rotate(50deg);
+	}
+	6%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+}
+@keyframes updateWait{
+	0%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	3%{
+		-webkit-transform: rotate(50deg);
+		transform: rotate(50deg);
+	}
+	6%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+}
+
+.header-right-update-running{
+	-webkit-animation: updateRun 1s linear infinite !important;
+	animation: updateRun 1s linear infinite !important;
+}
+@-webkit-keyframes updateRun{
+	from{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes updateRun{
+	from{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.header-right-update-image{
+	width: 16px;
+	height: 18px;
+	margin-top: 9px;
+}
+
+.header-right-diamonds{
+	margin: 0;
+}
+
+.header-right-settings{
+	padding: 10px;
+	margin-right: 15px;
+}
+/* HEADER: E */
+
+
+/* NAVIGATION: B */
+.nav-block{
+	width: 300px;
+	height: 100%;
+	white-space: normal;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 500;
+}
+
+.nav-logo{
+	width: 220px;
+	height: 54px;
+	margin: 13px auto 16px auto;
+	background-image: url(../app/parts/nav/images/nav_logo.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.nav-elem-switcher{
+	width: 100%;
+	height: 67px;
+	background-color: #1B191F;
+	cursor: pointer;
+}
+
+.nav-elem-switcher-image{
+	margin: 27px 0 0 19px;
+	transform: rotate(180deg);
+}
+
+.nav-elem-block{
+	width: 100%;
+	height: 46px;
+}
+
+.nav-elem{
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	cursor: pointer;
+}
+
+.nav-active{
+	border: none !important;
+	background-color: #3B92ED;
+}
+
+.nav-elem-image{
+	position: static;
+	margin: 14px 0 -2px 19px;
+}
+
+.nav-elem-news{
+	width: 18px;
+}
+
+.nav-elem-earn{
+	width: 22px;
+	height: 18px;
+	margin-left: 17px;
+}
+
+.nav-elem-tasks{
+	width: 18px;
+}
+
+.nav-elem-donate{
+	width: 19px;
+}
+
+.nav-elem-text{
+	color: #FFFFFF;
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+.nav-news-block{
+	position: static;
+}
+
+.nav-news-counter{
+	width: 25px;
+	line-height: 25px;
+	position: static;
+	margin-left: 90px;
+}
+
+.nav-news-counter-num{
+	font-size: 14px;
+}
+
+.nav-earn-execution{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+}
+
+.nav-earn-block{
+	width: 100%;
+	height: 20px;
+	margin: 10px 0 12px 0;
+	font-size: 10px;
+}
+
+.nav-earn-block > div{
+	height: 13px;
+	width: 13px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.nav-earn-block > div:last-child{
+	margin: 0;
+}
+
+.nav-earn-running > div{
+	-webkit-animation: earnRunning 1s infinite ease-in-out;
+	animation: earnRunning 1s infinite ease-in-out;
+}
+
+.nav-earn-elem1{
+	-webkit-animation-delay: -0.7s !important;
+	animation-delay: -0.7s !important;
+}
+
+.nav-earn-elem2{
+	-webkit-animation-delay: -0.6s !important;
+	animation-delay: -0.6s !important;
+}
+
+.nav-earn-elem3{
+	-webkit-animation-delay: -0.5s !important;
+	animation-delay: -0.5s !important;
+}
+
+.nav-earn-elem4{
+	-webkit-animation-delay: -0.4s !important;
+	animation-delay: -0.4s !important;
+}
+
+@-webkit-keyframes earnRunning{
+	0%, 40%, 100%{
+		-webkit-transform: translateY(0);
+	}
+	20%{
+		-webkit-transform: translateY(-10px);
+	}
+}
+
+@keyframes earnRunning{
+	0%, 40%, 100%{
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	}
+	20%{
+		transform: translateY(-10px);
+		-webkit-transform: translateY(-10px);
+	}
+}
+
+.nav-earn-text{
+	color: #FFFFFF;
+	font-size: 17px;
+}
+
+.nav-earn-text-status{
+	cursor: pointer;
+}
+
+
+/* for mini panel */
+.nav-mini-logo{
+	width: 63px;
+	height: 54px;
+	background-image: url(../app/parts/nav/images/nav_logo_mini.png);
+}
+
+.nav-mini-elem-switcher{
+	text-align: center;
+}
+
+.nav-mini-elem-switcher-image{
+	margin: 27px 0 0 0;
+	transform: rotate(0);
+}
+
+.nav-mini-news-block{
+	width: 0;
+	height: 0;
+	position: relative;
+}
+
+.nav-mini-news-counter{
+	width: 17px;
+	line-height: 17px;
+	position: absolute;
+	top: -19px;
+	right: -27px;
+}
+
+.nav-mini-news-counter-num{
+	font-size: 10px;
+}
+/* NAVIGATION: E */
+
+
+/* BUT GO TO EARN: B */
+.goearn-but-block{
+	display: none !important;
+}
+/* BUT GO TO EARN: E */
+
+
+/* FRAME FOR VIEWS */
+.frame-wrap{
+	height: 100%;
+}
+
+
+/* LOGIN VIEW: B */
+.login-auth, .login-trouble-text, .login-bottom-text-link{
+	cursor: pointer;
+}
+/* LOGIN VIEW: E */
+
+
+/* MAIN VIEW: B */
+.main-earn-but, .main-transition tr{
+	cursor: pointer;
+}
+
+.main-stat{
+	text-align: center;
+}
+
+.main-transition-right{
+	width: 1px;
+    white-space: nowrap;
+    padding: 0 30px 0 15px;
+}
+
+.main-transition-ref{
+	width: auto;
+}
+/* MAIN VIEW: E */
+
+
+/* SINGLE POST: B */
+.quest-block{
+	padding: 0 12px;
+	text-align: left !important;
+}
+
+.quest-elem-block{
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	margin: 0 4px 8px 4px;
+	float: none;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+}
+
+.quest-inactive-mark{
+	background-color: transparent;
+}
+
+.more-but{
+	height: 55px;
+	line-height: 55px;
+	margin: 10px 10px 15px 10px;
+	background-color: #EFEFEF;
+	color: #4F4F4F;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.more-text{
+	color: #4F4F4F;
+	font-size: 16px;
+}
+
+.more-anim{
+	height: 55px;
+}
+/* SINGLE POST: E */
+
+
+/* BID LIKES AND FOLLOWERS VIEWS: B */
+.bid-but, .bid-like-but, .bid-subs-but, .bid-subs-accept-but{
+	cursor: pointer;
+}
+/* BID LIKES AND FOLLOWERS VIEWS: E */
+
+
+/* MY TASKS VIEW: B */
+.tasks-elem{
+	cursor: pointer;
+}
+/* single task */
+.tasks-elem{
+	width: 48%;
+    margin: 0 1% 10px 1%;
+}
+
+/* confirm delete task */
+.tasks-delete-block, .tasks-delete-but{
+	cursor: pointer;
+}
+
+.tasks-delete-content{
+	cursor: auto;
+}
+/* MY TASKS VIEW: E */
+
+
+/* DONATE VIEW: B */
+.donate-buy, .donate-premium-bottom-but, .donate-turbo-right-but{
+	cursor: pointer;
+}
+
+/* donate: premium*/
+.donate-premium-bottom-text{
+	max-width: 500px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.donate-premium-bottom-text ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+.donate-premium-bottom-text ul li:after{
+	content: ",";
+}
+
+/* donate: turbo*/
+.donate-turbo-left{
+	width: 1px;
+}
+
+.donate-turbo-right-text{
+	display: inline-block;
+}
+
+.donate-turbo-right-but{
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	margin-top: 15px;
+}
+/* DONATE VIEW: E */
+
+
+/* DONATE VIP VIEW: B */
+.donate-vip-topbar{
+	height: 80px;
+}
+
+.donate-vip-topbar-text{
+	font-size: 20px;
+}
+
+.donate-vip-topbar-image-block, .donate-vip-buy, .donate-vip-turbo-right-but{
+	cursor: pointer;
+}
+
+/* donate vip: turbo*/
+.donate-vip-turbo-left{
+	width: 1px;
+}
+
+.donate-vip-turbo-right-text{
+	display: inline-block;
+}
+
+.donate-vip-turbo-right-but{
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+}
+/* DONATE VIP VIEW: E */
+
+
+/* NEWS VIEW: B */
+.news-content{
+	width: 46%;
+	margin: 20px 2%;
+	vertical-align: top;
+	display: inline-block;
+}
+/* NEWS VIEW: E */
+
+
+/* EARN VIEW: B */
+.earn-block{
+	background-color: #130824;
+	background-image: url("../app/pages/earn/images/earn_background_desktop.png");
+	background-repeat: repeat;
+	background-size: auto;
+}
+.earn-back-block, .earn-action-but{
+	cursor: pointer;
+}
+
+.earn-planet{
+	width: auto;
+	height: auto;
+	position: absolute;
+	left: 60px;
+	top: 40px;
+	z-index: 14;
+}
+
+.earn-rock{
+	height: 30%;
+	bottom: 120px;
+}
+/* EARN VIEW: E */
+
+
+/* TOP VIEW: B */
+.top-topbar{
+	height: 80px;
+	position: relative;
+	background-color: transparent;
+	z-index: 1;
+}
+
+.top-topbar-text{
+	font-size: 20px;
+}
+
+.top-topbar-image-block, .top-topbar-dialog, .top-dialog-block, .top-dialog-but{
+	cursor: pointer;
+}
+
+.top-dialog-content{
+	cursor: auto;
+}
+
+.top-info{
+	height: 80px;
+	margin-top: -80px;
+	padding: 0;
+}
+
+.top-userpos{
+	margin: 0;
+	padding-top: 12px;
+}
+
+.top-userpos-nick{
+	font-size: 18px;
+	margin: 0;
+	display: inline-block;
+}
+
+.top-userpos-nick:after{
+	content: " - ";
+}
+
+.top-userpos-place{
+	font-size: 24px;
+	display: inline-block;
+}
+
+.top-time-text{
+	color: #8A898C;
+	font-size: 16px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 18px;
+}
+
+.top-time-block{
+	border-radius: 10px;
+	bottom: -33px;
+}
+
+/* content */
+.top-pos-sign{
+	margin: 0 39px 0 65px;
+}
+
+.top-pos-right{
+	padding: 16px 39px 16px 19px;
+}
+/* TOP VIEW: E */
+
+
+/* SETTINGS VIEW: B */
+.settings-topbar{
+	height: 80px;
+}
+
+.settings-topbar-text{
+	font-size: 20px;
+}
+
+.settings-topbar-image-block, .settings-content-elem, .settings-social-image{
+	cursor: pointer;
+}
+/* SETTINGS VIEW: E */
+
+
+/* OTHERACC VIEW: B */
+.otheracc-topbar{
+	height: 80px;
+}
+
+.otheracc-topbar-text{
+	font-size: 20px;
+}
+
+.otheracc-topbar-image-block, .otheracc-order-but, .otheracc-dialog-but{
+	cursor: pointer;
+}
+/* OTHERACC VIEW: E */
+
+
+/* AUTOTASK VIEW: B */
+.autotask-topbar{
+	height: 80px;
+}
+
+.autotask-topbar-text{
+	font-size: 20px;
+}
+
+.autotask-topbar-image-block, .autotask-header-switch, .autotask-switch-but, .autotask-limit-but, .autotask-likes-but, .autotask-likesfollow-but, 
+.autotask-likesdialog-but, .autotask-earndialog-but{
+	cursor: pointer;
+}
+/* AUTOTASK VIEW: E */
+
+
+/* AUTHTROUBLE VIEW: B */
+.authtrouble-topbar{
+	height: 80px;
+}
+
+.authtrouble-topbar-text{
+	font-size: 20px;
+}
+
+.authtrouble-topbar-image-block, .authtrouble-bottom-but{
+	cursor: pointer;
+}
+/* AUTHTROUBLE VIEW: E */
+
+
+/* LVLPRIZE VIEW: B */
+.lvlprize-topbar{
+	height: 80px;
+}
+
+.lvlprize-topbar-text{
+	font-size: 20px;
+}
+
+.lvlprize-topbar-image-block, .lvlprize-miner, .lvlprize-preview{
+	cursor: pointer;
+}
+/* LVLPRIZE VIEW: E */
+
+
+/* PAYMENTWALL VIEW: B */
+.paymentwall-topbar{
+	height: 80px;
+}
+
+.paymentwall-topbar-text{
+	font-size: 20px;
+}
+
+.paymentwall-topbar-image-block{
+	cursor: pointer;
+}
+/* PAYMENTWALL VIEW: E */
+
+
+/* LIQPAY VIEW: B */
+.liqpay-topbar{
+	height: 80px;
+}
+
+.liqpay-topbar-text{
+	font-size: 20px;
+}
+
+.liqpay-topbar-image-block{
+	cursor: pointer;
+}
+/* LIQPAY VIEW: E */
+
+
+/* PURCHASE VIEW: B */
+.purchase-topbar{
+	height: 80px;
+}
+
+.purchase-topbar-text{
+	font-size: 20px;
+}
+
+.purchase-topbar-image-block, .purchase-right, .purchase-empty-shop{
+	cursor: pointer;
+}
+
+/* unsubscribe block */
+.purchase-unsubs-block, .purchase-unsubs-but{
+	cursor: pointer;
+}
+
+.purchase-unsubs-content{
+	cursor: auto;
+}
+/* PURCHASE VIEW: E */
+
+
+/* REFERRAL VIEW: B */
+.referral-topbar{
+	height: 80px;
+}
+
+.referral-topbar-text{
+	font-size: 20px;
+}
+
+.referral-ratedialog{
+	width: auto;
+	right: 0;
+}
+
+.referral-topbar-image-block, .referral-info-right, .referral-data-but{
+	cursor: pointer;
+}
+/* REFERRAL VIEW: E */
+
+
+/* REFERRAL INFO VIEW: B */
+.referral-info-topbar{
+	height: 80px;
+}
+
+.referral-info-topbar-text{
+	font-size: 20px;
+}
+
+.referral-info-topbar-image-block{
+	cursor: pointer;
+}
+/* REFERRAL INFO VIEW: E */
+
+
+/* CAPTCHA VIEW: B */
+.captcha-top{
+	height: 80px;
+}
+
+.captcha-top-back{
+	top: 21px;
+}
+
+.captcha-top-image{
+	margin-top: 12px;
+}
+
+.captcha-top-back, .captcha-but{
+	cursor: pointer;
+}
+/* CAPTCHA VIEW: E */

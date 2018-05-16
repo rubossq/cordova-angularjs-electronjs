@@ -1,0 +1,202 @@
+/* ADD TOP FOR EXIT BUTTON(FOR STATUS BAR) */
+.minead-top-exit{
+	top: 21px;
+}
+
+
+/* LONGTAB BLOCK IOS */
+.longtab-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.longtab-content{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* TUTORIAL */
+.guide-view{
+	box-shadow: 0px 0px 0px 900px rgba(22, 24, 39, 0.9);
+	-moz-box-shadow: 0px 0px 0px 900px rgba(22, 24, 39, 0.9);
+	-webkit-box-shadow: 0px 0px 0px 900px rgba(22, 24, 39, 0.9);
+}
+
+
+/* HEADER BLOCK IOS */
+.header{
+	height: 76px;
+}
+
+.header-left{
+	padding-top: 20px;
+}
+
+.header-right{
+	padding-top: 19px;
+}
+
+
+/* MAIN BLOCK IOS */
+.main-content{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* BID BLOCK IOS */
+.bid-like-list-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* TASKS BLOCK IOS */
+.tasks-content{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* DONATE BLOCK IOS */
+.donate-content{
+	-webkit-overflow-scrolling: touch;
+}
+
+.donate-left{
+	font-size: 0;
+}
+
+.donate-num{
+	margin-bottom: 0;
+}
+
+.donate-left-image{
+	vertical-align: bottom;
+}
+
+
+/* DONATE VIP BLOCK IOS */
+.donate-vip-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.donate-vip-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* NEWS BLOCK IOS */
+.news-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* EARN BLOCK IOS */
+.earn-back-block{
+	top: 30px;
+}
+
+.earn-coins-block{
+	top: 20px;
+}
+
+
+/* TOP BLOCK IOS */
+.top-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.top-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+.top-dialog-coins{
+	margin-top: 1px !important;
+}
+
+
+/* SETTINGS BLOCK IOS */
+.settings-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.settings-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* OTHERACC BLOCK IOS */
+.otheracc-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.otheracc-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* AUTOTASK BLOCK IOS */
+.autotask-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.autotask-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* AUTHTROUBLE BLOCK IOS */
+.authtrouble-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.authtrouble-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* LVLPRIZE BLOCK IOS */
+.lvlprize-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.lvlprize-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* PURCHASE BLOCK IOS */
+.purchase-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.purchase-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* REFERRAL BLOCK IOS */
+.referral-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.referral-block{
+	-webkit-overflow-scrolling: touch;
+}
+
+/* REFERRAL INFO BLOCK IOS */
+.referral-info-topbar{
+	height: 76px;
+	padding-top: 20px;
+}
+
+.referral-info-block{
+	-webkit-overflow-scrolling: touch;
+}

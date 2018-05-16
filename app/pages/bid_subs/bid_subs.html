@@ -1,0 +1,80 @@
+<div class='bid-select center'>
+	<a href="#/bid_like"><div class='bid-select-block inline'>
+		<div class='bid-select-circle inline'><img class='bid-select-like-image' src="images/likes_white.png"></div>
+		<div class='bid-select-text inline' ng-bind='likesButText'></div>
+	</div></a>
+
+	<a href="#bid_subs"><div class='bid-select-block inline'>
+		<div class='bid-select-circle bid-select-circle-active inline'><img class='bid-select-subs-image' src="images/followers_white.png"></div>
+		<div class='bid-select-text inline' ng-bind='subsButText'></div>
+	</div></a>
+</div>
+
+<!-- WRAP ON QUESTION -->
+<table class='bid-subs-acc-block center'>
+	<tr>
+		<td>
+			<div class='center'>
+				<input ng-change='changePrice()' ng-enter='bid()' ng-model='targetCountAcc' type='text' class='bid-subs-input center' placeholder='0'>
+			</div>
+			<div class='bid-subs-coins'>
+				{{diamondsText}} - <span class='bid-subs-coins-price'>{{priceAcc}}</span> 
+				<img class='bid-subs-coins-image' src="images/diamonds_red.png">
+			</div>
+			<div class='center'>
+				<input type='submit' ng-click='bid()' class='bid-subs-but' id='subsAccSend' ng-value='startText'>
+				<div class='bid-subs-but center none' id='subsAccSendAnim'><img class='but-anim' src="images/ripple.svg"></div>
+			</div>
+			<div class='bid-subs-warning center' ng-bind='warningText'></div>
+		</td>
+	</tr>
+</table>
+
+<!-- WRAP BY LINK -->
+<table class='bid-subs-link-block center none'>
+	<tr>
+		<td>
+			<div class='center'>
+				<input ng-model='link' type='text' class='bid-subs-input center' placeholder='{{linkSubsPh}}'>
+			</div>
+			<div class='center'>
+				<input ng-change='changePrice()' ng-enter='bid()' ng-model='targetCountLink' type='text' class='bid-subs-input center' placeholder='0'>
+			</div>
+			<div class='bid-subs-coins'>
+				{{diamondsText}} - <span class='bid-subs-coins-price'>{{priceLink}}</span> 
+				<img class='bid-subs-coins-image' src="images/diamonds_red.png">
+			</div>
+			<div class='center'>
+				<input type='submit' ng-click='bid()' class='bid-subs-but' id='subsLinkSend' ng-value='startText'>
+				<div class='bid-subs-but center none' id='subsLinkSendAnim'><img class='but-anim' src="images/ripple.svg"></div>
+			</div>
+			<div class='bid-subs-warning center' ng-bind='warningText'></div>
+		</td>
+	</tr>
+</table>
+
+<!-- ACCEPT TO SUBSCRIBE -->
+<table class='bid-subs-accept-block center none'>
+	<tr>
+		<td>
+			<div class='center'>
+				<img class='bid-subs-accept-image' src="images/no_tasks.png">
+			</div>
+			<div class='bid-subs-accept-head' ng-bind='acceptHeadText'></div>
+			<div class='bid-subs-accept-but' ng-bind='acceptButText' ng-click='acceptSubscribe()'></div>
+			<div class='bid-subs-accept-text' ng-bind='acceptMainText'></div>
+		</td>
+	</tr>
+</table>
+
+
+<!-- BOTTOM BUTTONS -->
+<div class='bid-buttons' id='subsBotButtons'>
+	<table>
+		<tr>
+			<td class='bid-but bid-but-active center' id='butSubsAcc' ng-click='switcherSubs(1)' ng-bind='accBut'></td>
+
+			<td class='bid-but center' id='butSubsLink' ng-click='switcherSubs(2)' ng-bind='nickBut'></td>
+		</tr>
+	</table>
+</div>

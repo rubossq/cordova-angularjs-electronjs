@@ -1,0 +1,25 @@
+<table class='referral-info-topbar'>
+	<tr>
+		<td class='referral-info-topbar-image-block' ng-click='back()'>
+			<img class='referral-info-topbar-image' src="images/back.png">
+		</td>
+		<td class='referral-info-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='referral-info-block center'>
+	<div class='referral-info-top'><img class='referral-info-top-image' src="app/pages/referral_info/images/referral_info_top.png"></div>
+	<div class='referral-info-point'><div class='referral-info-point-num'>1</div></div>
+	<div class='referral-info-text' ng-bind-html='text1 | prepareHtml'></div>
+	<div class='referral-info-point'><div class='referral-info-point-num'>2</div></div>
+	<div class='referral-info-text' ng-bind-html='text2 | prepareHtml'></div>
+	<div class='referral-info-point'><div class='referral-info-point-num'>3</div></div>
+	<div class='referral-info-text' ng-bind-html='text3 | prepareHtml'></div>
+	<div class='referral-info-point'><div class='referral-info-point-num'>4</div></div>
+	<div class='referral-info-text' ng-bind-html='text4 | prepareHtml'></div>
+	<div class='referral-info-point'><div class='referral-info-point-num'>5</div></div>
+	<div class='referral-info-text' ng-bind-html='text5 | prepareHtml'></div>
+	<div class='referral-info-bottom' ng-bind='textBot'></div>
+</div>

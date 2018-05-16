@@ -1,0 +1,143 @@
+<table class='settings-topbar'>
+	<tr>
+		<td class='settings-topbar-image-block' ng-click='back()'>
+			<img class='settings-topbar-image' src="images/back.png">
+		</td>
+		<td class='settings-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='settings-block'>
+	<table class='settings-content'>
+		<tr class='settings-content-elem' ng-click='openView("referral")'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-img'>
+				<img class='settings-referrals-image' src="app/pages/settings/images/settings_referrals.png">
+			</td>
+			<td class='settings-right-text' ng-bind='referralText'></td>
+			<td class='settings-margin'></td>
+		</tr>
+	</table>
+	<table class='settings-content'>
+		<tr class='settings-content-elem settings-version none'>
+			<td class='settings-margin'></td>
+			<td class='settings-version-text settings-border'>{{versionText}}</td>
+			<td class='settings-version-right settings-border center'>
+				<div class='settings-version-but' ng-click='openService("this")' ng-bind='updateButText'></div>
+			</td>
+			<td class='settings-margin'></td>
+		</tr>
+		<tr class='settings-content-elem'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-text settings-border' ng-bind='premiumAccText'></td>
+			<td class='settings-right-img settings-border right'>
+				<a href="#/donate/premium">
+					<div class='settings-switcher inline' id='premBut'></div>
+				</a>
+			</td>
+			<td class='settings-margin'></td>
+		</tr>
+		<tr class='settings-content-elem settings-content-elem-disable' id='premFollBlock'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-text settings-border' ng-bind='followEarnText'></td>
+			<td class='settings-right-img settings-border right'>
+				<div class='settings-switcher inline' id='premFollBut'></div>
+			</td>
+			<td class='settings-margin'></td>
+		</tr>
+		<tr class='settings-content-elem'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-text settings-border' ng-bind='autoEarnText'></td>
+			<td class='settings-right-img settings-border right'>
+				<div class='settings-switcher inline' id='autoEarnBut'></div>
+			</td>
+			<td class='settings-margin'></td>
+		</tr>
+	</table>
+
+	<table class='settings-content'>
+		<tr class='settings-content-elem' ng-click='shareApp()'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-img settings-share-forborder settings-border'>
+				<img class='settings-share-image' src="app/pages/settings/images/settings_share.png">
+			</td>
+			<td class='settings-right-text settings-share-forborder settings-border' ng-bind='shareText'></td>
+			<td class='settings-margin'><input type="text" class='settings-share-field none'></td>
+		</tr>
+		<tr class='settings-content-elem settings-content-iosrate none' ng-click='openService("this")'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-img settings-rate-forborder settings-border'>
+				<img class='settings-rate-image' src="app/pages/settings/images/settings_rate.png">
+			</td>
+			<td class='settings-right-text settings-rate-forborder settings-border' ng-bind='rateText'></td>
+			<td class='settings-margin'></td>
+		</tr>
+	</table>
+	<div class='settings-otherapp-block center none'>
+		<div class='settings-otherapp-head left' ng-bind='otherAppText'></div>
+		<div class='settings-otherapp-list left'>
+			<div ng-repeat='app in apps' class='settings-otherapp-elem center inline' ng-click='goLookOurApp(app.getAppId())'>
+				<div class='settings-otherapp-image-block inline' style='{{app.getSource() | setBgImage}}'></div>
+				<div class='settings-otherapp-elem-text'>{{app.getAppName()}}</div>
+			</div>
+		</div>
+	</div>
+	<div class='settings-social-separate'></div>
+	<div class='settings-social-block'>
+		<div class='settings-social-content center'>
+			<img class='settings-social-image' src='app/pages/settings/images/settings_contacts_mail.png' ng-click='openService("mail")'>
+			<img class='settings-social-image' src='app/pages/settings/images/settings_contacts_vk.png' ng-click='openService("vk")'>
+			<img class='settings-social-image' src='app/pages/settings/images/settings_contacts_fb.png' ng-click='openService("fb")'>
+			<img class='settings-social-image' src='app/pages/settings/images/settings_contacts_tw.png' ng-click='openService("tw")'>
+			<img class='settings-social-image' src='app/pages/settings/images/settings_contacts_tg.png' ng-click='openService("tg")'>
+		</div>
+	</div>
+	<table class='settings-content'>
+		<tr class='settings-content-elem' ng-click='openView("purchase")'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-img'>
+				<img class='settings-purchase-image' src="app/pages/settings/images/settings_purchase.png">
+			</td>
+			<td class='settings-right-text' ng-bind='purchaseText'></td>
+			<td class='settings-margin'></td>
+		</tr>
+	</table>
+	<table class='settings-content'>
+		<tr class='settings-content-elem'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-text settings-border' ng-bind='notifActiveText'></td>
+			<td class='settings-right-img settings-border right'>
+				<div class='settings-switcher inline' id='notifActiveBut'></div>
+			</td>
+			<td class='settings-margin'></td>
+		</tr>
+		<tr class='settings-content-elem'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-text settings-border' ng-bind='notifSoundText'></td>
+			<td class='settings-right-img settings-border right'>
+				<div class='settings-switcher inline' id='notifSoundBut'></div>
+			</td>
+			<td class='settings-margin'></td>
+		</tr>
+	</table>
+	<table class='settings-content'>
+		<tr class='settings-content-elem' ng-click='openService("privacy")'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-img settings-border'>
+				<img class='settings-privacy-image' src="app/pages/settings/images/settings_privacy.png">
+			</td>
+			<td class='settings-right-text settings-border' ng-bind='privacyText'></td>
+			<td class='settings-margin'></td>
+		</tr>
+		<tr class='settings-content-elem' ng-click='logout()'>
+			<td class='settings-margin'></td>
+			<td class='settings-left-img settings-border'>
+				<img class='settings-exit-image' src="app/pages/settings/images/settings_exit.png">
+			</td>
+			<td class='settings-right-text settings-border' ng-bind='exitAccText'></td>
+			<td class='settings-margin'></td>
+		</tr>
+	</table>
+</div>

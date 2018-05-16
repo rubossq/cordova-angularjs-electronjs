@@ -1,0 +1,99 @@
+<!-- temp blocking -->
+<table class='donate-vip-nopay-block none'>
+	<tr>
+		<td class='center'>
+			<div class='donate-vip-nopay-text' ng-bind='noPayText'></div>
+		</td>
+	</tr>
+</table>
+
+<table class='donate-vip-topbar'>
+	<tr>
+		<td class='donate-vip-topbar-image-block' ng-click='back()'>
+			<img class='donate-vip-topbar-image' src="images/back.png">
+		</td>
+		<td class='donate-vip-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+		<td class='donate-vip-diamonds'>
+			<div class='donate-vip-diamonds-num inline'>{{deposit}}</div>
+			<img class='donate-vip-diamonds-image' src="images/diamonds_white.png">
+		</td>
+	</tr>
+</table>
+
+<div class='donate-vip-block center'>
+	<div class='donate-vip-top' ng-bind='donateTop'></div>
+	<div class='donate-vip-border'></div>
+
+	<table class='donate-vip-order-block' id='pack_1_vip_name'>
+		<tr>
+			<td class='donate-vip-left'>
+				<img class='donate-vip-left-image' src="app/pages/donate_vip/images/donate_vip_diamond.png">
+			</td>
+			<td class='donate-vip-middle left'>
+				<div class='donate-vip-num' id="pack_1_vip_title"></div>
+				<div class='donate-vip-text'>{{priceText}} <span class='donate-vip-price' id="pack_1_vip_price"></span></div>
+			</td>
+			<td class='donate-vip-right'>
+				<div class='donate-vip-buy center' ng-click="order('pack_1_vip')" ng-bind='buyButText'></div>
+			</td>
+		</tr>
+	</table>
+	<div class='donate-vip-border'></div>
+	<table class='donate-vip-order-block' id='pack_2_vip_name'>
+		<tr>
+			<td class='donate-vip-left'>
+				<img class='donate-vip-left-image' src="app/pages/donate_vip/images/donate_vip_diamond.png">
+			</td>
+			<td class='donate-vip-middle left'>
+				<div class='donate-vip-num' id="pack_2_vip_title"></div>
+				<div class='donate-vip-text'>{{priceText}} <span class='donate-vip-price' id="pack_2_vip_price"></span></div>
+			</td>
+			<td class='donate-vip-right'>
+				<div class='donate-vip-buy center' ng-click="order('pack_2_vip')" ng-bind='buyButText'></div>
+			</td>
+		</tr>
+	</table>
+	<div class='donate-vip-border'></div>
+	<table class='donate-vip-order-block' id='pack_3_vip_name'>
+		<tr>
+			<td class='donate-vip-left'>
+				<img class='donate-vip-left-image' src="app/pages/donate_vip/images/donate_vip_diamond.png">
+			</td>
+			<td class='donate-vip-middle left'>
+				<div class='donate-vip-num' id="pack_3_vip_title"></div>
+				<div class='donate-vip-text'>{{priceText}} <span class='donate-vip-price' id="pack_3_vip_price"></span></div>
+			</td>
+			<td class='donate-vip-right'>
+				<div class='donate-vip-buy center' ng-click="order('pack_3_vip')" ng-bind='buyButText'></div>
+			</td>
+		</tr>
+	</table>
+	<div class='donate-vip-border'></div>
+
+	<div class='donate-vip-top' ng-bind='turboTop'></div>
+	<table class='donate-vip-turbo-block' id='turbos_5_name'>
+		<tr>
+			<td class='donate-vip-turbo-left left'>
+				<div class='donate-vip-turbo-left-circle center inline relative'>
+					<img class='donate-vip-turbo-left-background' src="app/pages/donate_vip/images/donate_vip_turbo_bg.png">
+					<img class='donate-vip-turbo-image relative' src='app/pages/donate_vip/images/donate_vip_turbo.png'>
+				</div>
+			</td>
+			<td class='donate-vip-turbo-right left'>
+				<div class='donate-vip-turbo-right-head' ng-bind='turboHead'></div>
+				<div class='donate-vip-turbo-right-text'>
+					<ul class='donate-vip-turbo-right-list'>
+						<li class='donate-vip-turbo-right-textelem'>{{turboFirst}} 
+							<span class='donate-vip-price' ng-bind='turboFirstNum'></span>
+						</li>
+						<li class='donate-vip-turbo-right-textelem' ng-bind='turboSecond'></li>
+						<li class='donate-vip-turbo-right-textelem' ng-bind='turboThird'></li>
+					</ul>
+				</div>
+				<div class='donate-vip-turbo-right-but center' id="turbos_5_price" ng-click="order('turbos_5')"></div>
+			</td>
+		</tr>
+	</table>
+</div>

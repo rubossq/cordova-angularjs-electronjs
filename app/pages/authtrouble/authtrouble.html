@@ -1,0 +1,66 @@
+<table class='authtrouble-topbar'>
+	<tr>
+		<td class='authtrouble-topbar-image-block' ng-click='back()'>
+			<img class='authtrouble-topbar-image' src="images/back.png">
+		</td>
+		<td class='authtrouble-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='authtrouble-block'>
+	<table class='authtrouble-content'>
+		<tr>
+			<td class='authtrouble-margin'></td>
+			<td class='authtrouble-elem'>
+				<div class='authtrouble-head' ng-bind='stepOneText'></div>
+				<div class='authtrouble-text' ng-bind='stepOneContent'></div>
+			</td>
+			<td class='authtrouble-margin'></td>
+		</tr>
+		<tr>
+			<td class='authtrouble-margin'></td>
+			<td class='authtrouble-elem'>
+				<div class='authtrouble-head' ng-bind='stepTwoText'></div>
+				<div class='authtrouble-text' ng-bind='stepTwoContent'></div>
+			</td>
+			<td class='authtrouble-margin'></td>
+		</tr>
+		<tr>
+			<td class='authtrouble-margin'></td>
+			<td class='authtrouble-elem'>
+				<div class='authtrouble-head' ng-bind='stepThreeText'></div>
+				<div class='authtrouble-text' ng-bind='stepThreeContent'></div>
+			</td>
+			<td class='authtrouble-margin'></td>
+		</tr>
+		<tr>
+			<td class='authtrouble-margin'></td>
+			<td class='authtrouble-elem'>
+				<div class='authtrouble-inet' ng-bind='goodInetText'></div>
+			</td>
+			<td class='authtrouble-margin'></td>
+		</tr>
+		<tr>
+			<td class='authtrouble-margin'></td>
+			<td class='authtrouble-elem'>
+				<div class='authtrouble-head' ng-bind='problemText'></div>
+				<div class='authtrouble-text'>
+					{{problemListText}}
+					<ul class='authtrouble-list'>
+						<li ng-bind='problemOneText'></li>
+						<li ng-bind='problemTwoText'></li>
+						<li ng-bind='problemThreeText'></li>
+					</ul>
+				</div>
+			</td>
+			<td class='authtrouble-margin'></td>
+		</tr>
+	</table>
+
+	<div class='authtrouble-bottom-block center'>
+		<div class='authtrouble-bottom-text' ng-bind='nothingText'></div>
+		<div class='authtrouble-bottom-but inline center' ng-click='feedBackUs()' ng-bind='feedBackButText'></div>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<table class='lvlprize-topbar'>
+	<tr>
+		<td class='lvlprize-topbar-image-block' ng-click='back()'>
+			<img class='lvlprize-topbar-image' src="images/back.png">
+		</td>
+		<td class='lvlprize-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='lvlprize-block'>
+	<table class='lvlprize-content'>
+		<tr ng-repeat='point in points'>
+			<td class='lvlprize-margin'></td>
+			<td class='lvlprize-left lvlprize-bottom-border'>{{point.num}}</td>
+			<td class='lvlprize-right lvlprize-bottom-border'><div ng-bind-html="point.text | prepareHtml"></div></td>
+			<td class='lvlprize-miner lvlprize-bottom-border'>
+				<img style='{{$index | prizeMinerSize}}' ng-src='{{$index | prizeMiner}}' ng-click='showPreview($index)'>
+			</td>
+			<td class='lvlprize-margin'></td>
+		</tr>
+	</table>
+</div>
+
+<table class='lvlprize-preview none' ng-click='hidePreview()'>
+	<tr>
+		<td class='center'>
+			<div class='lvlprize-preview-block inline'>
+				<img class='lvlprize-preview-image' src="">
+			</div>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,49 @@
+<div class='earn-block relative'>
+	<div class='earn-back-block' ng-click='back()'>
+		<img class='earn-back-image' src="images/back.png">
+	</div>
+
+	<img class='earn-planet' src="app/pages/earn/images/earn_planet.png">
+
+	<div class='earn-coins-block right'>
+		<div class='earn-coins-num'>
+			<span class='earn-coins-num-state'>{{stateDeposit}}</span>+<span>{{earnedDeposit}}</span>
+		</div>
+		<div class='earn-coins-text' ng-bind='earnedText'></div>
+		<a class='earn-coins-link' href='#/donate/turbo'>
+			<div class='earn-coins-num' ng-bind='powerVal'></div>
+			<div class='earn-coins-text' ng-bind='powerText'></div>
+		</a>
+	</div>
+
+	<div class='earn-action-block center'>
+		<a href="#/top"><div class='earn-action-but earn-action-but-top inline'>
+			<img class='earn-action-top-image' src="app/pages/earn/images/earn_totop.png">
+		</div></a>
+		<div class='earn-action-but earn-action-but-play inline' ng-click='playPause()'>
+			<img class='earn-action-play-image' src="app/pages/earn/images/earn_play.png">
+			<img class='earn-action-pause-image' src="app/pages/earn/images/earn_pause.png">
+		</div>
+		<a href='#/donate/turbo'><div class='earn-action-but earn-action-but-turbo inline'>
+			<img class='earn-action-turbo-image' src="app/pages/earn/images/earn_turbo.png">
+		</div></a>
+	</div>
+
+	<div class='earn-rock'>
+		<div class='earn-man center'>
+			<img class='earn-man-image' src="images/earn_man1.png">
+			<div class='earn-crack center'>
+				<img class='earn-crack-image' src="app/pages/earn/images/earn_crack.png">
+			</div>
+			<div class='earn-drill center'>
+				<img class='earn-drill-image' src="app/pages/earn/images/earn_drill_default.png">
+			</div>
+		</div>
+		<div class='earn-table inline center'>
+			<div class='earn-table-block none'>
+				<img class='earn-table-image' src="app/pages/earn/images/earn_wait.png">
+				<div class='earn-table-num none'></div>
+			</div>
+		</div>
+	</div>
+</div>

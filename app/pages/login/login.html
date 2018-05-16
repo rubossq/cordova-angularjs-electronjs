@@ -1,0 +1,15 @@
+<div class='login-block relative'>
+	<div class='login-top-block center'>
+		<img class='login-logo-image' src='images/logo.png'>
+	</div>
+	<div class='login-bottom-block center'>
+		<div class='center'>
+			<input type='submit' id='submit' class='login-auth' ng-value='authText' ng-click='auth()'>
+		</div>
+		<div class='login-trouble-text inline center' ng-click='helpAuth()' ng-bind='troubleText'></div>
+		<div class='login-bottom-text center'>
+			{{signupTextFirst}} <span class='login-bottom-text-font'> {{signupTextSecond}}</span> {{signupTextThird}} <span class='login-bottom-text-link' 
+			ng-click='openPrivacy()' ng-bind='privacyLinkText'></span>
+		</div>
+	</div>
+</div>

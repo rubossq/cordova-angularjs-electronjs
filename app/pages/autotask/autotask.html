@@ -1,0 +1,91 @@
+<table class='autotask-topbar'>
+	<tr>
+		<td class='autotask-topbar-image-block' ng-click='back()'>
+			<img class='autotask-topbar-image' src="images/back.png">
+		</td>
+		<td class='autotask-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='autotask-block'>
+
+	<div class='autotask-content'>
+		<table class='autotask-header-block'>
+			<tr>
+				<td>
+					<div class='autotask-header-text' ng-bind='autotaskHeader'></div>
+				</td>
+				<td class='autotask-header-switch center'>
+					<div class='autotask-header-switch-but'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='autotask-text' ng-bind='autotaskText'></div>
+		<table class='autotask-switch-block'>
+			<tr>
+				<td class='autotask-switch-part left'>
+					<div class='autotask-switch-text inline' ng-bind='autoSwitchText'></div>
+				</td>
+				<td class='autotask-switch-part right'>
+					<div class='autotask-switch-but inline'></div>
+				</td>
+			</tr>
+		</table>
+		<div class='autotask-limit-block none'>
+			<div class='autotask-text' ng-bind='limitText'></div>
+			<table class='autotask-limit-input center'>
+				<tr>
+					<td>
+						<input class='autotask-input center' ng-enter='setLimit()' ng-model='limitCount' type="number">
+					</td>
+					<td class='autotask-limit-part'>
+						<div class='autotask-limit-but inline' ng-bind='limitOk'></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class='autotask-buttons center'>
+		<div class='autotask-likes-but inline'>
+			<div class='autotask-but-images'>
+				<img class='autotask-likes-likes inline' src='app/pages/autotask/images/autotask_likes_fiolet.png'>
+			</div>
+		</div>
+
+		<div class='autotask-likesfollow-but inline'>
+			<div class='autotask-but-images'>
+				<img class='autotask-likesfollow-likes inline' src='app/pages/autotask/images/autotask_likes_fiolet.png'>
+				<img class='autotask-likesfollow-followers inline' src='app/pages/autotask/images/autotask_followers_fiolet.png'>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<table class='autotask-likesdialog-block none' ng-click='hideLikesDialog()'>
+	<tr>
+		<td class='center'>
+			<div class='autotask-likesdialog-content inline'>
+				<div class='autotask-likesdialog-head' ng-bind='likesDialogHead'></div>
+				<div class='autotask-likesdialog-text'><a class='autotask-likesdialog-link' href="#/donate/premium" ng-bind='likesDialogLink'></a></div>
+				<div class='autotask-likesdialog-but autotask-likesdialog-confirm inline' ng-bind='dialogConfirm'></div>
+				<div class='autotask-likesdialog-but autotask-likesdialog-cancel inline' ng-bind='dialogCancel' ng-click='hideLikesDialog()'></div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class='autotask-earndialog-block none'>
+	<tr>
+		<td class='center'>
+			<div class='autotask-earndialog-content inline'>
+				<div class='autotask-earndialog-head' ng-bind='earnDialogHead'></div>
+				<div class='autotask-earndialog-but autotask-earndialog-confirm inline' ng-bind='dialogConfirm'></div>
+				<div class='autotask-earndialog-but autotask-earndialog-cancel inline' ng-bind='dialogCancel'></div>
+			</div>
+		</td>
+	</tr>
+</table>

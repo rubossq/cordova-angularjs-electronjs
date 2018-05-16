@@ -1,0 +1,91 @@
+<div ng-controller='bidLikeCtrl'>
+	<div class='bid-select center'>
+		<a href="#/bid_like"><div class='bid-select-block inline'>
+			<div class='bid-select-circle bid-select-circle-active inline'><img class='bid-select-like-image' src="images/likes_white.png"></div>
+			<div class='bid-select-text inline' ng-bind='likesButText'></div>
+		</div></a>
+
+		<a href="#/bid_subs"><div class='bid-select-block inline'>
+			<div class='bid-select-circle inline'><img class='bid-select-subs-image' src="images/followers_white.png"></div>
+			<div class='bid-select-text inline' ng-bind='subsButText'></div>
+		</div></a>
+	</div>
+
+	<!-- WRAP ON QUESTION -->
+	<div class='bid-like-list-block'>
+		<div class='bid-like-list-info'>
+			<div class='quest-block center'>
+				<div ng-repeat="post in posts" class='quest-elem-block relative none' on-long-press="multipleBidLikes($index, '')" 
+					ng-mouseover="switchLongField('over', $index)" ng-mouseleave="switchLongField('leave', $index)" ng-click='bidLikes(post)'>
+					<div class='quest-active-block none'></div>
+					<div class='quest-likes-field inline'>
+						<div class='quest-likes-text inline'>{{post.getLikesCount()}}</div>
+						<img class='quest-likes-image inline' src="images/quest_like.png">
+						{{setPosts($index, post.getThumbnail())}}
+					</div>
+					<div class='quest-active-mark quest-inactive-mark none' ng-mouseover="switchLongMark('over', $index)" 
+						ng-mouseleave="switchLongMark('leave', $index)"	ng-click="multipleBidLikes($index, $event)">
+						<img class='quest-active-image' src='images/check_mark.png'>
+					</div>
+				</div>
+			</div>
+			<div class='clear'></div>
+
+			<div class='bid-like-more-but more-but center none' ng-click='showMore()'>
+				<div class='bid-like-more-text more-text' ng-bind='showMoreBut'></div>
+				<img class='bid-like-more-anim more-anim none' src='images/ripple.svg'>
+			</div>
+
+			<div class='bid-like-more-block more-block center none'>
+				<div class="more-elem1 inline"></div>
+				<div class="more-elem2 inline"></div>
+				<div class="more-elem3 inline"></div>
+				<div class="more-elem4 inline"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- IF THERE AREN'T ANSWERS -->
+	<table class='bid-like-notasks-block none'>
+		<tr>
+			<td class='center'>
+				<img class='bid-like-notasks-image' src='images/no_tasks.png'>
+				<div class='bid-like-notasks-text' ng-bind='bidLikeNoQuestText'></div>
+			</td>
+		</tr>
+	</table>
+
+	<!-- WRAP BY LINK -->
+	<table class='bid-like-link-block center none'>
+		<tr>
+			<td>
+				<div class='center'>
+					<input ng-model='link' type='text' class='bid-like-input center' placeholder='{{linkLikePh}}' ng-focus='setFocus()' ng-blur='removeFocus()'>
+				</div>
+				<div class='center'>
+					<input ng-change='changePrice()' ng-enter='bid()' ng-model='targetCount' type='text' class='bid-like-input center' 
+					placeholder='0' ng-focus='setFocus()' ng-blur='removeFocus()'>
+				</div>
+				<div class='bid-like-coins'>
+					{{diamondsText}} - <span class='bid-like-coins-price'>{{price}}</span> 
+					<img class='bid-like-coins-image' src="images/diamonds_red.png">
+				</div>
+				<div class='center'>
+					<input type='submit' class='bid-like-but' ng-click='bid()' id='likeSend' ng-value='startText'>
+					<div class='bid-like-but center none' id='likeSendAnim'><img class='but-anim' src="images/ripple.svg"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<!-- BOTTOM BUTTONS -->
+	<div class='bid-buttons' id='likeBotButtons'>
+		<table>
+			<tr>
+				<td class='bid-but bid-but-active center' id='butLikeList' ng-click='switcherLikes(1)' ng-bind='listBut'></td>
+
+				<td class='bid-but center' id='butLikeLink' ng-click='switcherLikes(2)' ng-bind='linkBut'></td>
+			</tr>
+		</table>
+	</div>
+</div>

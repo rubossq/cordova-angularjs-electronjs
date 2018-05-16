@@ -1,0 +1,12 @@
+<div class='news-block none'>
+	<div ng-repeat="n in news" class='news-content' id="news_id_{{n.getNewsId()}}" ng-bind-html="n.getView() | prepareHtml"></div>
+
+	<table class='news-notasks-block none'>
+		<tr>
+			<td class='center'>
+				<img class='news-notasks-image' src='images/no_tasks.png'>
+				<div class='news-notasks-text' ng-bind='noNewsText'></div>
+			</td>
+		</tr>
+	</table>
+</div>

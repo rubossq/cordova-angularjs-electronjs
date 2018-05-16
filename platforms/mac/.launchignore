@@ -1,0 +1,13 @@
+.launchignore!
+.htaccess
+checksumm!
+files!
+checkstatus.txt!
+launcher/
+Thumbs.db!
+platforms/
+app/services/store-mac.js~
+js/main/utils/PlatformConfig-mac.js~
+index-mac.html~
+cordova-android/
+cordova-ios/

@@ -1,0 +1,78 @@
+<table class='purchase-topbar'>
+	<tr>
+		<td class='purchase-topbar-image-block' ng-click='back()'>
+			<img class='purchase-topbar-image' src="images/back.png">
+		</td>
+		<td class='purchase-topbar-text'>
+			<div ng-bind='backText'></div>
+		</td>
+	</tr>
+</table>
+
+<div class='purchase-block'>
+	<div class='purchase-top-turbos none'>
+		<div class='purchase-head' ng-bind='activePurchases'></div>
+		<div class='purchase-head-border'></div>
+	</div>
+	<table class='purchase-list purchase-turbos'>
+		<tr ng-repeat='turbo in turbos'>
+			<td class='purchase-left center'>
+				<div class='purchase-left-block' ng-style='{{setBlockColor(turbo.pack_id)}}'>
+					<img class='purchase-left-turbo' src='app/pages/purchase/images/purchase_turbo.png'>
+				</div>
+			</td>
+			<td class='purchase-middle'>
+				<div class='purchase-middle-name'>{{turbo.name}}</div>
+				<div class='purchase-middle-late'>{{turbo.time}}</div>
+			</td>
+			<td class='purchase-right' ng-click='showUnsubscribe(turbo.id)'>
+				<img class='purchase-right-cancel' src='app/pages/purchase/images/purchase_cancel.png'>
+			</td>
+		</tr>
+	</table>
+
+	<div class='purchase-top-purchases none'>
+		<div class='purchase-head' ng-bind='committedPurchases'></div>
+		<div class='purchase-head-border'></div>
+	</div>
+	<table class='purchase-list purchase-purchases'>
+		<tr ng-repeat='purchase in purchases'>
+			<td class='purchase-left center'>
+				<div class='purchase-left-block' ng-style='{{setBlockColor(purchase.pack_id)}}'>
+					<img class='{{purchase.class}}' ng-src='{{purchase.src}}'>
+				</div>
+			</td>
+			<td class='purchase-middle'>
+				<div class='purchase-middle-name'>{{purchase.name}}</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<table class='purchase-empty none'>
+	<tr>
+		<td class='center'>
+			<div class='purchase-empty-text' ng-bind='emptyText'></div>
+			<div class='purchase-empty-shop' ng-click='openShop()' ng-bind='emptyShop'></div>
+		</td>
+	</tr>
+</table>
+
+<!-- UNSUBSCRIBE -->
+<table class='purchase-unsubs-block none' ng-click='hideUnsubscribe()'>
+	<tr>
+		<td class='center'>
+			<div class='purchase-unsubs-content inline'>
+				<div class='purchase-unsubs-head' ng-bind='unsubscribeHead'></div>
+				<div class='purchase-unsubs-but inline' ng-click='hideUnsubscribe()'>
+					<div class='purchase-unsubs-cancel relative'><img class='purchase-unsubs-cancel-image' src="images/cross_white.png"></div>
+					<div class='purchase-unsubs-but-text' ng-bind='unsubscribeCancel'></div>
+				</div>
+				<div class='purchase-unsubs-but inline' ng-click='confirmUnsubscribe()'>
+					<div class='purchase-unsubs-confirm relative'><img class='purchase-unsubs-confirm-image' src="images/check_mark.png"></div>
+					<div class='purchase-unsubs-but-text' ng-bind='unsubscribeConfirm'></div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

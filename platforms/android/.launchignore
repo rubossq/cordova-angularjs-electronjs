@@ -1,0 +1,12 @@
+.launchignore!
+.htaccess
+checksumm!
+files!
+checkstatus.txt!
+launcher/
+Thumbs.db!
+platforms/
+app/services/store-android.js~
+js/main/utils/PlatformConfig-android.js~
+index-android.html~
+cordova-android/~

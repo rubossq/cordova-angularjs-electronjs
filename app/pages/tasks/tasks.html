@@ -1,0 +1,71 @@
+<div class='tasks-block' ng-controller="tasksCtrl">
+	<div class='tasks-update-block center none'>
+		<img class='tasks-update-image' src="images/update.png">
+	</div>
+
+	<div class='tasks-content'>
+		<div id='tasksWrap' style='margin-top: 0'>
+			<div class='tasks-elem' ng-repeat="task in tasks" id="task_{{task.getId()}}" ng-click='bidMore(task)'>
+				{{setTasksDesktop($index)}}
+				<div class='tasks-elem-content'>
+					<table>
+						<tr>
+							<td class='tasks-elem-left'>
+								<div class='tasks-elem-image' style='{{task.getHead() | setBgImage}}'></div>
+							</td>
+							<td class='tasks-elem-middle'>
+								<div class='tasks-elem-type'>
+									<img class='tasks-elem-status' ng-src='{{task.getStatus() | setTaskImageStatus:$index}}' 
+									ng-click='showTextStatus($event, task.getStatus())'>{{task.getType() | setTaskTextType:this}}
+								</div>
+								<div class='tasks-elem-progress'>
+									<div class='tasks-elem-progressbar' style='{{task.getStatus() | setTaskColorStatus : task.getReadyCount() : task.getTargetCount()}}'></div>
+								</div>
+								<div class='tasks-elem-count'><span>{{task.getReadyCount()}}</span> {{ofText}} <span>{{task.getTargetCount()}}</span></div>
+							</td>
+							<td class='tasks-elem-right center'>
+								<div class='tasks-elem-hang inline' style='{{task.getStatus() | setRefreshBut:$index}}' ng-click='refreshTask($event, task)'>
+									<img class='tasks-elem-hang-image' src="app/pages/tasks/images/tasks_hang.png">
+								</div>
+							</td>
+							<td class='tasks-elem-right center'>
+								<div class='tasks-elem-delete inline' ng-click='deleteTask($event, task)'>
+									<img class='tasks-elem-delete-image' src="app/pages/tasks/images/tasks_cross_red.png">
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<table class='tasks-notasks-block none'>
+		<tr>
+			<td class='center'>
+				<img class='tasks-notasks-image' src='images/no_tasks.png'>
+				<div class='tasks-notasks-text' ng-bind='tasksNoQuestText'></div>
+				<a class="tasks-notasks-link" href='#/bid_like'><div ng-bind='tasksNoQuestLink'></div></a>
+			</td>
+		</tr>
+	</table>
+
+	<!-- DELETE TASK -->
+	<table class='tasks-delete-block none' ng-click='hideDeleteTask()'>
+		<tr>
+			<td class='center'>
+				<div class='tasks-delete-content inline'>
+					<div class='tasks-delete-head' ng-bind='deleteTaskHead'></div>
+					<div class='tasks-delete-but inline' ng-click='hideDeleteTask()'>
+						<div class='tasks-delete-cancel relative'><img class='tasks-delete-cancel-image' src="images/cross_white.png"></div>
+						<div class='tasks-delete-but-text' ng-bind='deleteTaskCancel'></div>
+					</div>
+					<div class='tasks-delete-but inline' ng-click='confirmDeleteTask()'>
+						<div class='tasks-delete-confirm relative'><img class='tasks-delete-confirm-image' src="images/check_mark.png"></div>
+						<div class='tasks-delete-but-text' ng-bind='deleteTaskConfirm'></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
